@@ -1,0 +1,125 @@
+@if(!isDeactive){
+<div class="container py-5 bg-light-soft min-vh-100 fade-in-up">
+  <div class="row justify-content-center">
+    <div class="col-md-7 col-lg-6">
+      <div class="card border-0 shadow-lg p-2" style="border-radius: 24px;">
+        <div class="card-body p-4">
+
+          <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark-blue">
+              {{ isEditMode ? 'Edit Your Appointment' : 'Book New Appointment' }}
+            </h2>
+            <p class="text-muted small">Please fill in the details below to secure your slot</p>
+          </div>
+
+          @if (selectedDoctor) {
+          <div class="d-flex align-items-center p-3 mb-4 rounded-4 price-container"
+            style="background-color: rgba(254, 155, 246, 0.08); border: 1px solid rgba(162, 155, 254, 0.1);">
+            <div class="avatar-wrapper me-3">
+              <img [src]="selectedDoctor.avatar || 'assets/images/default-doctor.webp'" class="doctor-img shadow-sm"
+                width="65" height="65">
+            </div>
+            <div>
+              <h5 class="mb-0 fw-bold text-dark-blue">{{ selectedDoctor.name }}</h5>
+              <div class="blue-color small fw-medium">{{ selectedDoctor.specialization }}</div>
+              <div class="mt-1">
+                <span class="badge bg-white text-dark shadow-sm py-1 px-2" style="font-size: 0.7rem;">
+                  <i class="bi bi-star-fill text-warning me-1"></i> {{ selectedDoctor.rating }} Rating
+                </span>
+              </div>
+            </div>
+          </div>
+          }
+
+          <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-secondary ms-1">Select Date</label>
+              <input type="date" formControlName="date"
+                class="form-control form-control-lg border-0 bg-light rounded-3 shadow-none" [min]="today">
+
+              @if(selectedDoctor){
+              <div class="mt-2">
+                <small class="text-muted">
+                  Available on:
+                  @for (day of getAvailableDaysNames(); track $index) {
+                  <span class="badge bg-purple-light me-1">
+                    {{ day }}
+                  </span>
+                  }
+                </small>
+              </div>
+              }
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label small fw-bold text-secondary ms-1">
+                <i class="bi bi-clock me-1 text-purple"></i> Choose Time Slot
+              </label>
+
+              <select formControlName="timeSlot"
+                class="form-select form-select-lg border-0 bg-light rounded-3 shadow-none">
+
+                @if (filteredSlots.length > 0) {
+                <option value="" disabled selected>Select an available slot</option>
+                @for (slot of filteredSlots; track $index) {
+                <option [value]="slot.startTime + ' - ' + slot.endTime" [disabled]="slot.isBooked && !isEditMode">
+                  {{ slot.startTime }} - {{ slot.endTime }} {{ slot.isBooked ? '(Booked)' : '' }}
+                </option>
+                }
+                }
+                @else if (appointmentForm.get('date')?.value) {
+                <option value="" disabled selected>No available slots for this day</option>
+                }
+                @else {
+                <option value="" disabled selected>Please select a date first</option>
+                }
+              </select>
+
+              @if (appointmentForm.get('date')?.value && filteredSlots.length === 0) {
+              <div class="text-danger small mt-2 ms-1 animate__animated animate__shakeX">
+                <i class="bi bi-exclamation-circle me-1"></i>
+                Sorry, the doctor is not available on this day.
+              </div>
+              }
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-6">
+                <button type="button" class="btn btn-light w-100 py-3 fw-bold rounded-3"
+                  (click)="router.navigate(['/patient/appointments'])">
+                  Cancel
+                </button>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="btn btn-grad w-100 py-3 fw-bold rounded-3 shadow"
+                  [disabled]="appointmentForm.invalid">
+                  {{ isEditMode ? 'Update' : 'Confirm' }}
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+}@else {
+<div class="container py-5 min-vh-100 d-flex align-items-center justify-content-center bg-light-soft">
+  <div class="deactive-container p-5 text-center fade-in-up shadow-sm">
+    <div class="deactive-icon-wrapper mb-4">
+      <i class="bi bi-shield-lock-fill display-1"></i>
+    </div>
+    <h2 class="deactive-title mb-3">Account Deactivated</h2>
+    <p class="deactive-text mb-4">
+      You cannot book appointments right now. Please reach out to our support team to reactivate your account.
+    </p>
+    <div class="support-contact-box">
+      <p class="mb-2 fw-bold"><i class="bi bi-telephone-fill"></i> 01099823</p>
+      <p class="mb-0 fw-bold"><i class="bi bi-envelope-paper-fill"></i> support@medical.com</p>
+    </div>
+    <button class="btn btn-primary-gradient mt-4 px-5" (click)="router.navigate(['/'])">Back to Home</button>
+  </div>
+</div>
+}

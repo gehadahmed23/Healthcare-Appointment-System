@@ -1,0 +1,94 @@
+<div class="appointment-row py-3 px-4 border-bottom d-flex align-items-center">
+  <div class="col-datetime">
+    <div class="fw-medium text-secondary">{{ appointment.date | date:'dd MMM yyyy' }} - {{ appointment.timeSlot }}</div>
+  </div>
+
+  <div class="col-doctor">
+    <div class="d-flex align-items-center clickable-profile">
+      <img [src]="patient?.avatar" class="rounded-circle me-3 border" alt="Patient"
+        style="width: 45px; height: 45px; object-fit: cover;">
+      <div class="clickable-profile" [routerLink]="['/doctor/patient/'+ patient?.id]">
+        <div class="fw-bold doctor-name">{{ patient?.name }}</div>
+        <div class="text-muted small">{{ patient?.phone }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-status d-flex align-items-center">
+    <span class="badge rounded-pill px-3 py-2" [ngClass]="{
+      'bg-success-light text-success': appointment.status === 'completed',
+      'bg-primary-light text-primary': appointment.status === 'confirmed',
+      'bg-warning-light text-warning': appointment.status === 'pending',
+      'bg-danger-light text-danger': appointment.status === 'cancelled'
+    }">
+      {{ appointment.status | titlecase }}
+    </span>
+  </div>
+
+  <div class="flex-grow-1 d-flex align-items-center justify-content-end">
+    <div class="dropdown">
+      <button class="btn btn-light btn-sm rounded-circle border-0 shadow-sm p-0" style="width: 32px; height: 32px;"
+        type="button" data-bs-toggle="dropdown" data-bs-boundary="window" aria-expanded="false">
+        <i class="bi bi-three-dots-vertical text-muted" style="font-size: 0.9rem;"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 py-1" style="min-width: 170px;">
+        @if(CanAddPrescription){
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center" (click)="AddPrescription(appointment.id)">
+            <i class="bi bi-capsule me-2 text-primary"></i>
+            <span class="small-text">Add Prescription</span>
+          </button>
+        </li>
+        }
+
+        @if(appointment.status === 'pending') {
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center" (click)="updateStatus('confirmed')">
+            <i class="bi bi-check-circle me-2 text-primary"></i>
+            <span class="small-text text-primary">Confirm Booking</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center text-danger"
+            (click)="updateStatus('cancelled')">
+            <i class="bi bi-x-circle me-2"></i>
+            <span class="small-text">Reject Appointment</span>
+          </button>
+        </li>
+        }
+
+        @else if(appointment.status === 'confirmed') {
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center" (click)="updateStatus('completed')">
+            <i class="bi bi-calendar2-check me-2 text-success"></i>
+            <span class="small-text text-success">Mark Completed</span>
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center text-danger"
+            (click)="updateStatus('cancelled')">
+            <i class="bi bi-slash-circle me-2"></i>
+            <span class="small-text">Cancel</span>
+          </button>
+        </li>
+        }
+
+        @else if(appointment.status === 'completed'){
+        <button class="dropdown-item py-2 px-3 d-flex align-items-center text-danger" data-bs-toggle="modal"
+          data-bs-target="#globalDeleteModal" (click)="confirmDelete()"> <i class="bi bi-trash3 me-2"></i>
+          <span class="small-text">Remove Record</span>
+        </button>
+        }
+
+        @else {
+        <li class="px-3 py-2">
+          <span class="text-muted small-text italic">
+            <i class="bi bi-info-circle me-1"></i> No actions
+          </span>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.appointment-row {
+  transition: all 0.2s ease;
+  min-height: 80px;
+  border-radius: 12px;
+}
+
+.appointment-row:hover {
+  background-color: var(--bg-hover) !important;
+  transform: translateX(4px);
+}
+
+/* .doctor-name {
+  color: #8e85eb !important;
+  font-weight: 600;
+} */
+.doctor-name {
+  color: #4077dd !important;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.doctor-name:hover {
+  text-decoration: underline;
+  color: #326ad2 !important;
+}
+
+.bg-success-light {
+  background-color: var(--status-success-bg) !important;
+  color: var(--status-success-text) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--bg-nav-active) !important;
+  color: var(--text-primary-soft) !important;
+}
+
+.bg-warning-light {
+  background-color: var(--status-warning-bg) !important;
+  color: var(--status-warning-text) !important;
+}
+
+.bg-danger-light {
+  background-color: var(--status-danger-bg) !important;
+  color: var(--status-danger-text) !important;
+}
+
+.col-datetime {
+  width: 33.33333333%;
+}
+
+.col-doctor {
+  width: 50%;
+}
+
+.clickable {
+  cursor: pointer;
+  color: var(--text-primary-soft);
+}
+
+.clickable-profile {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.clickable-profile:hover {
+  opacity: 0.8;
+}
+
+.btn-modern-view {
+  /* background: linear-gradient(135deg, #a29bfe, #ff76ac); */
+  color: white !important;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px var(--sidebar-shadow);
+}
+
+.btn-modern-view:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(162, 155, 254, 0.3);
+}

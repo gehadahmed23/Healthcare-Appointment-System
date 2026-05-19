@@ -1,0 +1,21 @@
+.letter-spacing {
+  letter-spacing: 0.05rem;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+app-appointment-card:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header {
+  background-color: #fcfcfd !important;
+}
+
+@media (max-width: 991.98px) {
+  .card-header {
+    display: none;
+  }
+}

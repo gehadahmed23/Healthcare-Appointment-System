@@ -1,0 +1,66 @@
+<div class="notif-page-wrapper">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="notif-main-card">
+          <div class="notif-header d-flex justify-content-between align-items-center">
+            <div>
+              <h4 class="mb-1 fw-bold text-dark">Notifications</h4>
+              <p class="text-muted small mb-0">Stay updated with your latest activities</p>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              @if(notifications.length > 0) {
+              <button (click)="clearAll()" class="btn btn-outline-danger btn-sm rounded-pill px-4 shadow-sm">
+                <i class="bi bi-trash3 me-1"></i> Clear All
+              </button>
+              }
+              <span class="badge px-3 py-2 rounded-pill shadow-sm bg-primary-soft text-primary">
+                {{ notifications.length }} Total
+              </span>
+            </div>
+          </div>
+
+          <div class="list-group list-group-flush">
+            @for (notif of notifications; track notif.id) {
+            <div class="notif-item d-flex gap-4 align-items-center" [class.unread-bg]="notif.status === 'unread'">
+
+              <div class="notif-icon-box"
+                [ngClass]="notif.type === 'appointment_booked' ? 'bg-success-soft' : 'bg-primary-soft'">
+                <i class="bi"
+                  [ngClass]="notif.type === 'appointment_booked' ? 'bi-calendar2-check-fill' : 'bi-bell-fill'"></i>
+              </div>
+
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h6 class="mb-0 fw-bold d-flex align-items-center gap-2" style="color: #2d3436;">
+                    {{ notif.type === 'appointment_booked' ? 'New Appointment' : 'Update' }}
+                    @if(notif.status === 'unread') {
+                    <span class="status-dot"></span>
+                    }
+                  </h6>
+                  <small class="text-muted fw-light">
+                    <i class="bi bi-clock me-1"></i> {{ notif.createdAt | date:'MMM d, y, h:mm a' }}
+                  </small>
+                </div>
+                <p class="mb-0 text-secondary" style="font-size: 14.5px; line-height: 1.6;">
+                  {{ notif.message }}
+                </p>
+              </div>
+
+            </div>
+            } @empty {
+            <div class="py-5 text-center">
+              <i class="bi bi-bell-slash text-light display-1 d-block mb-3"></i>
+              <h5 class="text-muted">Your inbox is empty</h5>
+              <p class="small text-muted">When you receive notifications, they will appear here.</p>
+            </div>
+            }
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

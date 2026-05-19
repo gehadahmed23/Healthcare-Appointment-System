@@ -1,0 +1,123 @@
+<div class="container py-5">
+  <div class="booking-wrapper shadow-lg border-0 rounded-4">
+
+    <div class="booking-header text-center p-5 custom-gradient rounded-top-4">
+      <div class="header-icon-circle mb-3">
+        <span class="blue-text" style="font-weight: bold; font-size: 1.5rem;">Rx</span>
+      </div>
+      <h2 class="fw-bold mb-1 blue-text">Medical Prescription</h2>
+      <p class="blue-text">Fill in the details to generate patient prescription</p>
+    </div>
+
+    <div class="card-body p-4 p-lg-5">
+      <form [formGroup]="prescriptionForm" (ngSubmit)="submit()">
+
+        <div class="section-container mb-5">
+          <div class="d-flex align-items-center mb-4">
+            <span class="section-number">1</span>
+            <h5 class="section-title mb-0">Diagnosis Details</h5>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control rounded-3"
+              [class.is-invalid]="diagnosis?.invalid && diagnosis?.touched" formControlName="diagnosis" id="diagnosis"
+              placeholder="Diagnosis">
+            <label for="diagnosis">Main Diagnosis</label>
+
+            @if (diagnosis?.invalid && diagnosis?.touched) {
+            <small class="custom-error-msg">
+              Diagnosis is required
+            </small>
+            }
+          </div>
+        </div>
+
+        <div class="section-container mb-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+              <span class="section-number">2</span>
+              <h5 class="section-title mb-0">Medications List</h5>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-pill px-4" (click)="addMedication()">
+              + Add Drug
+            </button>
+          </div>
+
+          <div formArrayName="medications">
+            @for (med of medications.controls; track $index; let i = $index) {
+            <div [formGroupName]="i" class="med-card">
+
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-primary px-3 py-2">Medication #{{ i + 1 }}</span>
+                <button type="button" class="btn btn-sm btn-link text-danger text-decoration-none"
+                  (click)="removeMedication(i)" *ngIf="medications.length > 1">
+                  Remove
+                </button>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control"
+                      [class.is-invalid]="med.get('name')?.invalid && med.get('name')?.touched" formControlName="name"
+                      placeholder="Drug Name">
+                    <label>Drug Name</label>
+                    @if (med.get('name')?.invalid && med.get('name')?.touched) {
+                    <small class="custom-error-msg">Name is required</small>
+                    }
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="dosage" placeholder="Dosage">
+                    <label>Dosage</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="frequency" placeholder="Frequency">
+                    <label>Frequency</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" formControlName="duration" placeholder="Duration">
+                    <label>Duration</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+
+        <div class="section-container mb-5">
+          <div class="d-flex align-items-center mb-4">
+            <span class="section-number">3</span>
+            <h5 class="section-title mb-0">Additional Instructions</h5>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" formControlName="notes" placeholder="Notes" style="height: 120px"></textarea>
+            <label>Write any notes for the patient...</label>
+          </div>
+        </div>
+
+        <div class="pt-3">
+          <button type="submit" class="btn btn-submit-custom w-100 shadow" [disabled]="prescriptionForm.invalid">
+            SAVE
+          </button>
+
+          @if (prescriptionForm.invalid && prescriptionForm.touched) {
+          <p class="text-center mt-3 small" style="color: var(--text-small);">
+            Please fill all required fields to enable the submit button.
+          </p>
+          }
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

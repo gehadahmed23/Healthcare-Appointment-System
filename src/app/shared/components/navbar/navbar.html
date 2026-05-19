@@ -1,0 +1,157 @@
+<header class="header d-flex align-items-center justify-content-between px-4 shadow-sm bg-white">
+  <div class="header-left d-flex align-items-center">
+    <div class="logo-wrapper d-flex align-items-center gap-2 flex-nowrap">
+      <img src="logo2.png" class="logo-img" alt="Preclinic Logo">
+      <span class="logo-text d-none d-sm-inline fw-bold playwrite-au-qld-pop">
+        <span class="text-left playwrite-au-qld-pop">Ever</span><span class="text-right">Care</span>
+      </span>
+    </div>
+    <!-- <button class="btn btn-light rounded-circle sidebar-toggle shadow-sm">
+      <i class="bi bi-list"></i>
+    </button> -->
+  </div>
+  <nav class="d-flex gap-2 gap-md-0 gap-lg-4 ms-2 ms-lg-5 bitter-nav flex-nowrap">
+    <a routerLink="/home" routerLinkActive="active" class="nav-link-custom ">Home</a>
+    <a routerLink="/doctors" routerLinkActive="active" class="nav-link-custom">Doctors</a>
+    <a routerLink="/services" routerLinkActive="active" class="nav-link-custom d-none d-md-inline">Services</a>
+    <a routerLink="/about" routerLinkActive="active" class="nav-link-custom d-none d-md-inline">About</a>
+  </nav>
+
+  <div class="header-right d-flex align-items-center gap-3">
+    <!-- <div class="search-bar position-relative d-none d-lg-block">
+      <i class="bi bi-search position-absolute start-0 top-50 translate-middle-y ms-3 text-muted"></i>
+      <input type="text" class="form-control rounded-pill ps-5 bg-light border-0 shadow-none" placeholder="Search here">
+    </div> -->
+
+    <!-- <button class="btn btn-ai-gradient d-flex align-items-center gap-2 px-3 py-2 rounded-3 shadow-sm">
+      <i class="bi bi-stars"></i>
+      <span class="fw-bold small">AI Assistance</span>
+    </button> -->
+
+    <div class="header-icons d-flex gap-2">
+      <!-- <button class="btn btn-icon-round"><i class="bi bi-calendar4-event"></i></button> -->
+      <!-- <button class="btn btn-icon-round position-relative">
+        <i class="bi bi-bell"></i>
+        <span class="notification-badge"></span>
+      </button> -->
+      @if(authService.isAuthenticated()){
+      <div class="dropdown">
+        <button class="btn btn-icon-round position-relative" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi bi-bell"></i>
+          @if (unreadCount > 0) {
+          <span class="notification-badge">{{ unreadCount }}</span>
+          }
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2 py-0 notification-dropdown">
+          <li class="p-3 border-bottom d-flex justify-content-between align-items-center bg-light rounded-top">
+            <h6 class="mb-0 fw-bold">Notifications</h6>
+            <span class="badge bg-primary rounded-pill small">{{ unreadCount }} New</span>
+          </li>
+
+          <div class="notification-items" style="max-height: 350px; overflow-y: auto;">
+            @for (notif of notifications; track notif.id) {
+            <li>
+              <a class="dropdown-item p-3 border-bottom d-flex gap-3 align-items-start"
+                [class.bg-unread]="notif.status === 'unread'" style="white-space: normal;">
+                <div class="notif-icon-circle"
+                  [ngClass]="notif.type === 'appointment_booked' ? 'bg-success-light' : 'bg-info-light'">
+                  <i class="bi"
+                    [ngClass]="notif.type === 'appointment_booked' ? 'bi-calendar-check text-success' : 'bi-arrow-repeat text-info'"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <p class="mb-1 small text-dark fw-medium">{{ notif.message }}</p>
+                  <span class="text-muted d-block" style="font-size: 11px;">
+                    <i class="bi bi-clock me-1"></i>{{ notif.createdAt | date:'shortTime' }}
+                  </span>
+                </div>
+              </a>
+            </li>
+            } @empty {
+            <li class="p-4 text-center text-muted">
+              <i class="bi bi-bell-slash d-block fs-4 mb-2"></i>
+              <p class="small mb-0">No notifications yet</p>
+            </li>
+            }
+          </div>
+
+          <li>
+            <a class="dropdown-item text-center py-2 small fw-bold text-primary rounded-bottom" style="cursor: pointer;"
+              [routerLink]="['/'+ role +'/all-notifications']">
+              View All Notifications
+            </a>
+          </li>
+        </ul>
+      </div>
+      }
+      <div class="header-icons d-flex gap-2 align-items-center">
+        <button class="btn btn-icon-round theme-toggle" (click)="toggleTheme()"
+          [title]="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+          <i class="bi"
+            [ngClass]="isDarkMode ? 'bi-sun-fill text-warning' : 'bi-moon-stars-fill text-primary-soft'"></i>
+        </button>
+
+        <div class="dropdown">
+        </div>
+
+        <button class="btn btn-icon-round"><i class="bi bi-chat-dots"></i></button>
+      </div>
+    </div>
+
+    @if(authService.isAuthenticated()){
+    <div class="user-profile dropdown d-flex align-items-center gap-2 ms-2 ps-3 border-start">
+      <div class="d-flex align-items-center gap-2" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        style="cursor: pointer;">
+        <div class="text-end d-none d-sm-block">
+          <p class="mb-0 fw-bold small" style="color:var(--text-title);">{{ (authService.user$ | async)?.name }}</p>
+          <p class="mb-0" style="color:var(--text-small); font-size: 10px;">{{ authService.getRole() | uppercase }}</p>
+        </div>
+        <img
+          [src]="(authService.user$ | async)?.avatar ||
+         'https://ui-avatars.com/api/?name=' + (authService.user$ | async)?.name + '&background=f0f4ff&color=2e59d9&bold=true'"
+          class="rounded-circle profile-img border shadow-sm" alt="User Avatar">
+      </div>
+
+      <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" style="border-radius: 12px;">
+        <li>
+          <h6 class="dropdown-header">User Settings</h6>
+        </li>
+        @if (authService.user$ | async; as currentUser) {
+        <li>
+          @if(currentUser.role=='admin'){
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2" routerLink="/admin/dashboard">
+            <i class="bi bi-person text-muted"></i> Dashboard
+          </a>
+          }@else{
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2"
+            [routerLink]="['/' + currentUser.role + '/details', currentUser.id]">
+            <i class="bi bi-person text-muted"></i> My Profile
+          </a>
+          }
+        </li>
+        }
+
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li>
+          <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" (click)="onLogout()"
+            style="cursor: pointer;">
+            <i class="bi bi-box-arrow-right"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+    }@else {
+    <div class="d-flex align-items-center gap-2 ms-2 ps-3 border-start">
+      <a routerLink="/login"
+        class="btn btn-login-outline d-flex align-items-center gap-2 px-4 py-2 rounded-pill shadow-sm">
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span class="fw-bold small">LogIn</span>
+      </a>
+    </div>
+    }
+
+  </div>
+</header>

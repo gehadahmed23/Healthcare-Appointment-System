@@ -1,0 +1,135 @@
+<div class="container py-5 profile-container" *ngIf="patient">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <div class="card border-0 main-profile-card shadow-sm mb-4">
+        <div class="profile-banner custom-gradient-header"></div>
+        <div class="card-body px-4 pb-4">
+
+          <div class="d-flex align-items-end profile-header-content">
+            <div class="avatar-wrapper">
+              <img [src]="patient.avatar || 'assets/images/default-avatar.png'"
+                class="profile-avatar border border-5 border-white shadow" alt="avatar">
+              <span class="status-indicator"
+                [ngClass]="{'active': patient.isActive, 'inactive': !patient.isActive}"></span>
+            </div>
+
+            <div class="ms-4 flex-grow-1 mb-2 profile-title-area">
+              <div class="d-flex align-items-center gap-2 mb-1 title-badge-row">
+                <h2 class="fw-bold m-0 text-dark">{{patient.name}}</h2>
+                @if(role === 'patient') {
+                <a [routerLink]="[`/${role}/EditProfile`, patient.id]"
+                  class="btn btn-outline-purple btn-sm rounded-circle shadow-sm" title="Edit Profile">
+                  <i class="bi bi-pencil-fill"></i>
+                </a>
+                }
+              </div>
+              <p class="text-muted mb-2 id-text">
+                <i class="bi bi-fingerprint me-2"></i> ID: #{{patient.id}}
+              </p>
+              <div class="text-muted small">
+                <i class="bi bi-clock-history me-2"></i>Member since: {{patient.createdAt | date:'longDate'}}
+              </div>
+            </div>
+            <div class="d-flex gap-2 mb-3 action-buttons">
+              @if(isAdmin) {
+              @if(patient.isActive !== false) {
+              <button class="btn btn-outline-danger px-3 rounded-pill shadow-sm"
+                (click)="deactivatePatient(patient.id)">
+                <i class="bi bi-person-x me-2"></i>Deactivate
+              </button>
+              } @else {
+              <button class="btn btn-outline-success px-3 rounded-pill shadow-sm" (click)="activatePatient(patient.id)">
+                <i class="bi bi-person-check me-2"></i>Activate
+              </button>
+              }
+              }
+              @if(isDoctor) {
+              <button class="btn btn-medical-history px-4 py-2 rounded-pill shadow-sm"
+                [routerLink]="['/doctor/medicalRecords/', patient.id]">
+                <i class="bi bi-clock-history me-2"></i>
+                <span>View Medical History</span>
+              </button>
+              }
+              <button class="btn btn-primary-action px-4 rounded-pill shadow-sm">
+                <i class="bi bi-envelope-plus me-2"></i>Send Message
+              </button>
+              <button class="btn btn-light-action rounded-circle shadow-sm" [disabled]="!patient.phone">
+                <i class="bi bi-telephone"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="card border-0 shadow-sm p-4 info-card h-100">
+            <h5 class="fw-bold mb-4 text-dark d-flex align-items-center">
+              <span class="icon-title-box me-3"><i class="bi bi-person-badge"></i></span>
+              Contact Information
+            </h5>
+
+            <div class="contact-list">
+              <div class="contact-item mb-4">
+                <label class="text-muted small text-uppercase fw-bold ls-1">Email Address</label>
+                <div class="d-flex align-items-center mt-1 info-value">
+                  <i class="bi bi-envelope-at me-3 text-primary"></i>
+                  <a href="mailto:{{patient.email}}"
+                    class="text-decoration-none text-dark fw-medium">{{patient.email}}</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <label class="text-muted small text-uppercase fw-bold ls-1">Phone Number</label>
+                <div class="d-flex align-items-center mt-1 info-value">
+                  <i class="bi bi-phone me-3 text-primary"></i>
+                  <span class="fw-medium text-dark">{{patient.phone || 'Not Provided'}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="card border-0 shadow-sm p-4 info-card h-100">
+            <h5 class="fw-bold mb-4 text-dark d-flex align-items-center">
+              <span class="icon-title-box me-3"><i class="bi bi-shield-check"></i></span>
+              Account Details
+            </h5>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="status-box p-3 rounded-3 text-center"
+                  [ngClass]="patient.isActive !== false ? 'bg-status-active' : 'bg-status-inactive'">
+                  <div class="small text-muted mb-1">Account Status</div>
+                  <div class="fw-bold" [ngClass]="patient.isActive !== false ? 'text-success' : 'text-danger'">
+                    <i class="bi"
+                      [ngClass]="patient.isActive !== false ? 'bi-check-circle-fill' : 'bi-x-circle-fill'"></i>
+                    {{ patient.isActive !== false ? 'Active' : 'Deactive' }}
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="status-box p-3 rounded-3 text-center bg-status-role">
+                  <div class="small text-muted mb-1">System Role</div>
+                  <div class="fw-bold text-primary text-uppercase">
+                    <i class="bi bi-person-gear"></i>
+                    {{patient.role}}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 alert bg-light border-0 text-muted small d-flex align-items-center">
+              <i class="bi bi-info-circle me-3 fs-5 text-primary"></i>
+              <div>This account was generated on {{patient.createdAt | date:'medium'}}. Any modifications require
+                administrative privileges.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

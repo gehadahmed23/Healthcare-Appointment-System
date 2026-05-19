@@ -1,0 +1,72 @@
+.prescription-card {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #eef0f2;
+}
+
+.patient-bar {
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.doctor-name {
+  color: #4077dd !important;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #f0f0f0;
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-top: none;
+}
+
+.advice-box {
+  background-color: #fcfcfc;
+  border-left: 4px solid #0d6efd;
+}
+
+.signature-space {
+  width: 150px;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.x-small {
+  font-size: 0.75rem;
+}
+
+@media print {
+
+  .btn-print,
+  .card-footer {
+    display: none !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .prescription-card {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

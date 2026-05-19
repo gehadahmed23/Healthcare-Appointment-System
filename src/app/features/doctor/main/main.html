@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm d-lg-none py-3 px-4">
+      <div class="container-fluid p-0">
+         <h6 class="fw-bold mb-0">Main Menu</h6>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#doctorSidebar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="doctorSidebar" class="col-lg-2 d-lg-block sidebar bg-white shadow-sm collapse p-0">
+          <div class="sidebar-sticky">
+             <div class="logo pt-4 px-3 d-none d-lg-block">
+              <h6 class="fw-bold mb-0">Main Menu</h6>
+            </div>
+
+            <ul class="nav flex-column px-3 mt-3">
+              <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" routerLink="dashboard" routerLinkActive="active">
+                  <i class="bi bi-grid-fill me-2"></i> Dashboard
+                </a>
+              </li>
+              <li class="nav-item"><a class="nav-link d-flex align-items-center" routerLink="appointments"
+                  routerLinkActive="active"><i class="bi bi-calendar-event-fill me-3"></i> Appointments</a></li>
+              <!-- <li class="nav-item"><a class="nav-link d-flex align-items-center" routerLink="prescriptions"
+                  routerLinkActive="active"><i class="bi bi-file-earmark-medical-fill me-3"></i> Prescriptions</a></li> -->
+              <li class="nav-item"><a class="nav-link d-flex align-items-center"
+                  [routerLink]="['/doctor/schedule/' + (authService.user$ | async)?.id]" routerLinkActive="active"><i
+                    class="bi bi-people-fill me-3"></i>My Schedule</a>
+              <li class="nav-item"><a class="nav-link d-flex align-items-center"
+                  [routerLink]="['/doctor/details/'+ (authService.user$ | async)?.id]" routerLinkActive="active"><i
+                    class="bi bi-person-fill me-3"></i> My Profile</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-lg-10 ms-sm-auto px-md-4 bg-light-soft min-vh-100">
+          <div class="content-wrapper py-4">
+            <router-outlet></router-outlet>
+          </div>
+        </main>
+      </div>
+    </div>

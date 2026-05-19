@@ -1,0 +1,63 @@
+.letter-spacing {
+  letter-spacing: 0.05rem;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-card);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--bg-header-1), var(--bg-header-2)) !important;
+  border-bottom: 1px solid var(--border-light);
+  padding: 15px 20px;
+}
+
+.card-header span {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+app-appointment-card:not(:last-child) {
+  border-bottom: 1px solid var(--border-extra-light);
+  display: block;
+}
+
+app-appointment-card:hover {
+  background-color: var(--bg-hover);
+}
+
+@media (max-width: 991.98px) {
+  .card-header {
+    display: none;
+  }
+
+  .card {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.page-title {
+  color: var(--text-title);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  border-radius: 3px;
+}

@@ -1,0 +1,85 @@
+<div class="form-container-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="custom-form-card">
+          <div class="form-header-gradient custom-gradient-header p-4">
+            <h3 class="mb-0 text-white">
+              <i class="fas fa-user-circle me-2"></i> Edit Your Profile
+            </h3>
+            <p class="mb-0 small text-white-50">Keep your personal information up to date.</p>
+          </div>
+
+          <div class="card-body p-4 p-md-5 bg-white">
+            <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+
+              <h5 class="text-purple-dark mb-4 border-bottom-dashed pb-2">Profile Picture</h5>
+              <div class="row mb-5 align-items-center">
+                <div class="col-md-4 text-center">
+                  <div class="position-relative d-inline-block">
+                    <img [src]="imagePreview || 'assets/images/default-avatar.png'" class="doctor-img-preview">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <label class="form-label">Update Avatar</label>
+                  <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*">
+                  <div class="form-text">Choose a clean, professional photo.</div>
+                </div>
+              </div>
+
+              <h5 class="text-purple-dark mb-4 border-bottom-dashed pb-2">Account Details</h5>
+              <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" formControlName="name" class="form-control"
+                    [class.is-invalid]="patientForm.get('name')?.invalid && patientForm.get('name')?.touched">
+                  @if (patientForm.get('name')?.touched && patientForm.get('name')?.errors?.['required']) {
+                  <div class="text-danger">Full name is required.</div>
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="text" formControlName="phone" class="form-control" placeholder="01xxxxxxxxx"
+                    [class.is-invalid]="patientForm.get('phone')?.invalid && patientForm.get('phone')?.touched">
+                  @if (patientForm.get('phone')?.touched) {
+                  @if (patientForm.get('phone')?.errors?.['required']) { <div class="text-danger">Phone is required.
+                  </div> }
+                  @else if (patientForm.get('phone')?.errors?.['pattern']) { <div class="text-danger">Invalid Egyptian
+                    phone number.</div> }
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" formControlName="email" class="form-control"
+                    [class.is-invalid]="patientForm.get('email')?.invalid && patientForm.get('email')?.touched">
+                  @if (patientForm.get('email')?.touched && patientForm.get('email')?.errors?.['pattern']) {
+                  <div class="text-danger">Please enter a valid email.</div>
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Update Password</label>
+                  <input type="password" formControlName="password" class="form-control"
+                    [class.is-invalid]="patientForm.get('password')?.invalid && patientForm.get('password')?.touched">
+                  @if (patientForm.get('password')?.touched && patientForm.get('password')?.errors?.['pattern']) {
+                  <div class="text-danger">Must contain letters and numbers (min 6).</div>
+                  }
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end gap-3 mt-5">
+                <button type="button" class="btn btn-light px-4 rounded-3" routerLink="/dashboard">Cancel</button>
+                <button type="submit" class="btn btn-submit-gradient btn-grad px-5 shadow-sm" [disabled]="patientForm.invalid">
+                  Update Profile
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

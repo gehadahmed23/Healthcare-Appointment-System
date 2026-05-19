@@ -1,0 +1,220 @@
+<div class="form-container-wrapper">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/'+role+'/doctors']">Doctors</a></li>
+        <li class="breadcrumb-item active">{{ isEditMode ? 'Edit Doctor' : 'Add New Doctor' }}</li>
+      </ol>
+    </nav>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="custom-form-card">
+          <div class="form-header-gradient  custom-gradient-header p-4">
+            <h3 class="mb-0 text-white">
+              <i class="fas fa-user-md me-2"></i>
+              @if(isEditMode && (authService.user$ |async)?.role === 'admin'){Edit Doctor}
+              @else if(isEditMode && (authService.user$ |async)?.role === 'doctor'){Edit Your Profile}
+              @else {Add New Doctor}
+            </h3>
+            @if((authService.user$ |async)?.role === 'doctor'){
+            <p class="mb-0 small text-white-50">Keep your personal information up to date.</p>
+            }
+            @else {
+            <p class="mb-0 small text-white-50">Fill in the details below to manage the doctor's information.</p>
+            }
+          </div>
+
+          <div class="card-body p-4 p-md-5 " style="background-color: var(--bg-card);">
+            <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+
+              <h5 class="text-purple-dark mb-4 border-bottom-dashed pb-2">Profile Picture</h5>
+              <div class="row mb-4 align-items-center">
+                <div class="col-md-3 text-center">
+                  <div class="position-relative d-inline-block">
+                    <img [src]="imagePreview || 'https://via.placeholder.com/150'" class="doctor-img-preview">
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <label class="form-label">Upload Avatar</label>
+                  <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*">
+                  <div class="form-text">Recommended: Square image, max 2MB.</div>
+                </div>
+              </div>
+
+              <h5 class="text-purple-dark mb-4 border-bottom-dashed pb-2">Personal Information</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" formControlName="name" class="form-control"
+                    [class.is-invalid]="doctorForm.get('name')?.invalid && doctorForm.get('name')?.touched">
+                  @if (doctorForm.get('name')?.touched) {
+                  @if (doctorForm.get('name')?.errors?.['required']) {
+                  <div class="text-danger">Name is required.</div>
+                  } @else if (doctorForm.get('name')?.errors?.['minlength']) {
+                  <div class="text-danger">Name must be at least 3 characters.</div>
+                  }
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" formControlName="email" class="form-control"
+                    [class.is-invalid]="doctorForm.get('email')?.invalid && doctorForm.get('email')?.touched">
+                  @if (doctorForm.get('email')?.touched) {
+                  @if (doctorForm.get('email')?.errors?.['required']) {
+                  <div class="text-danger">Email is required.</div>
+                  } @else if (doctorForm.get('email')?.errors?.['pattern']) {
+                  <div class="text-danger">Please enter a valid email address.</div>
+                  }
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Password</label>
+                  <input type="password" formControlName="password" class="form-control"
+                    [class.is-invalid]="doctorForm.get('password')?.invalid && doctorForm.get('password')?.touched">
+                  @if (doctorForm.get('password')?.touched) {
+                  @if (doctorForm.get('password')?.errors?.['required']) {
+                  <div class="text-danger">Password is required.</div>
+                  } @else if (doctorForm.get('password')?.errors?.['pattern']) {
+                  <div class="text-danger">Must be at least 6 characters, including letters and numbers.
+                  </div>
+                  }
+                  }
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Specialization</label>
+                  <select formControlName="specialization" class="form-select"
+                    [class.is-invalid]="doctorForm.get('specialization')?.invalid && doctorForm.get('specialization')?.touched">
+                    <option value="">Select Specialization</option>
+                    <option value="cardiologist">cardiologist</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Orthopedic Surgeon">Orthopedic Surgeon </option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Neurosurgeon">Neurosurgeon</option>
+                    <option value="Oncologist">Oncologist</option>
+                    <option value="Pulmonologist">Pulmonologist</option>
+                    <option value="Urologist">Urologist</option>
+                  </select>
+                  @if (doctorForm.get('specialization')?.touched &&
+                  doctorForm.get('specialization')?.errors?.['required']) {
+                  <div class="text-danger">Please select a specialization.</div>
+                  }
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">Experience (Years)</label>
+                  <input type="number" formControlName="experience" class="form-control"
+                    [class.is-invalid]="doctorForm.get('experience')?.invalid && doctorForm.get('experience')?.touched">
+                  @if (doctorForm.get('experience')?.touched) {
+                  @if (doctorForm.get('experience')?.errors?.['required']) {
+                  <div class="text-danger">Required.</div>
+                  } @else if (doctorForm.get('experience')?.errors?.['min']) {
+                  <div class="text-danger">Cannot be negative.</div>
+                  }
+                  }
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">Price ($)</label>
+                  <input type="number" formControlName="price" class="form-control"
+                    [class.is-invalid]="doctorForm.get('price')?.invalid && doctorForm.get('price')?.touched">
+                  @if (doctorForm.get('price')?.touched) {
+                  @if (doctorForm.get('price')?.errors?.['required']) {
+                  <div class="text-danger">Required.</div>
+                  } @else if (doctorForm.get('price')?.errors?.['min']) {
+                  <div class="text-danger">Cannot be negative.</div>
+                  }
+                  }
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Professional Bio</label>
+                <textarea formControlName="bio" rows="4" class="form-control" placeholder="Describe expertise..."
+                  [class.is-invalid]="doctorForm.get('bio')?.invalid && doctorForm.get('bio')?.touched"
+                  style="resize: none;"></textarea>
+                @if (doctorForm.get('bio')?.touched) {
+                @if (doctorForm.get('bio')?.errors?.['required']) {
+                <div class="text-danger">Bio is required.</div>
+                } @else if (doctorForm.get('bio')?.errors?.['maxlength']) {
+                <div class="text-danger">Maximum 500 characters allowed.</div>
+                }
+                }
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-3 border-bottom-dashed pb-2">
+                <h5 class="text-purple-dark mb-0">Availability Schedules</h5>
+                <button type="button" class="btn bg-purple-light fw-bold" (click)="addSlot()">
+                  <i class="fas fa-plus me-1"></i> Add Slot
+                </button>
+              </div>
+
+              <div formArrayName="availableSlots" class="mb-4">
+                @for (slot of availableSlots.controls; track slot; let i = $index) {
+                <div [formGroupName]="i" class="row g-2 mb-2 p-3 rounded-3 align-items-end slot-row">
+                  <div class="col-md-3">
+                    <label class="small fw-bold form-label">Day</label>
+                    <select formControlName="day" class="form-select form-select-sm">
+                      @for (day of days; track day) {
+                      <option [value]="day">{{day}}</option>
+                      }
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="small fw-bold form-label">Start Time</label>
+                    <input type="time" formControlName="startTime" class="form-control form-control-sm"
+                      [class.is-invalid]="slot.get('startTime')?.invalid && slot.get('startTime')?.touched">
+                  </div>
+                  <div class="col-md-3">
+                    <label class="small fw-bold form-label">End Time</label>
+                    <input type="time" formControlName="endTime" class="form-control form-control-sm"
+                      [class.is-invalid]="slot.get('endTime')?.invalid && slot.get('endTime')?.touched">
+                  </div>
+                  <div class="col-md-3 d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <input type="checkbox" formControlName="isBooked" class="form-check-input">
+                      <label class="form-check-label small" style="color: var(--text-small);">Booked</label>
+                    </div>
+                    @if(doctorForm.get('isBooked')?.value){
+                    <button type="button" class="btn btn-delete-slot" (click)="removeSlot(i)">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                    }
+
+                  </div>
+                  @if ((slot.get('startTime')?.invalid || slot.get('endTime')?.invalid) &&
+                  (slot.get('startTime')?.touched || slot.get('endTime')?.touched)) {
+                  <div class="col-12 mt-1">
+                    <span class="text-danger">Both Start and End times are required.</span>
+                  </div>
+                  }
+                </div>
+                }
+                @if (availableSlots.length === 0) {
+                <div class="text-center py-4 border rounded-3 border-dashed empty-state">
+                  <p class=" mb-0 small">No slots added yet. Click "Add Slot" to start.</p>
+                </div>
+                }
+              </div>
+
+              <div class="d-flex justify-content-end gap-3 mt-5">
+                <button type="button" class="btn px-4 rounded-3 text-secondary"
+                  style="background-color: var(--soft-bg); color: var(--text-small);"
+                  [routerLink]="role === 'admin' ? '/admin/doctors' : '/doctor/details/' + doctorId">Cancel</button>
+                <button type="submit" class="btn btn-submit-gradient btn-grad px-5 shadow-sm"
+                  [disabled]="doctorForm.invalid">
+                  {{ isEditMode ? 'Update Doctor Profile' : 'Save New Doctor' }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

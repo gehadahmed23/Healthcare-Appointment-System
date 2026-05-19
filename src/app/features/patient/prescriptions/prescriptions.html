@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="card shadow-sm overflow-hidden border-0">
+    <div class="card-header bg-white py-3 border-bottom d-none d-lg-block">
+      <div class="row fw-bold text-muted small text-uppercase letter-spacing">
+        <div class="col-4">Date</div>
+        <div class="col-5">Doctor</div>
+        <div class="col-3 psts"></div>
+      </div>
+    </div>
+
+    <div class="card-body p-0">
+      @if(prescriptions && prescriptions.length > 0){
+      @for (item of prescriptions; track item.id) {
+      <app-prescription-card [prescription]="item"></app-prescription-card>
+      }
+      } @else {
+      <div class="text-center py-5 bg-light">
+        <i class="bi bi-calendar-x text-muted display-4"></i>
+        <p class="mt-3 text-secondary">No prescriptions found.</p>
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="schedule-wrapper p-4">
+  <div class="card main-card border-0 shadow-sm">
+    <div class="custom-gradient-header p-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h3 class="mb-1">My Schedule</h3>
+          <p class="opacity-75 mb-0">Manage your available time slots and sessions</p>
+        </div>
+        <div class="header-icon">
+          <i class="bi bi-clock-history fs-1"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body p-4">
+      <div class="days-nav mb-4 pb-2 border-bottom">
+        <div class="d-flex gap-2 overflow-auto">
+          @for (day of weekDays; track day) {
+          <button (click)="activeDay = day" [class.active]="activeDay === day" class="day-btn">
+            {{ day }}
+          </button>
+          }
+        </div>
+      </div>
+
+      <div class="add-slot-form p-4 rounded-4 mb-4 shadow-sm border">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-3">
+            <label class="form-label small fw-bold" style="color: var(--text-small);">Session</label>
+            <select class="form-select border-0 bg-light" [(ngModel)]="newSlot.session" name="session">
+              <option value="Morning">Morning</option>
+              <option value="Evening">Evening</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label small fw-bold" style="color: var(--text-small);">From</label>
+            <input type="time" class="form-control border-0 bg-light" [(ngModel)]="newSlot.from" name="from">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label small fw-bold" style="color: var(--text-small);">To</label>
+            <input type="time" class="form-control border-0" [(ngModel)]="newSlot.to" name="to">
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-grad w-100 py-2 fw-bold" (click)="addNewSlot()">
+              <i class="bi bi-plus-lg me-1"></i> Add Slot
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slots-section">
+        <h5 class="fw-bold mb-4" style="color: var(--text-title);">Availability for <span class="text-primary">{{
+            activeDay }}</span></h5>
+        <div class="d-flex flex-wrap gap-3">
+          @for (slot of getSlotsByDay(activeDay); track slot) {
+          <div class="slot-card animate-in" [class.morning-border]="slot.session === 'Morning'"
+            [class.evening-border]="slot.session === 'Evening'">
+            <div class="d-flex align-items-center gap-3">
+              <div class="session-icon-wrapper" [ngClass]="slot.session === 'Morning' ? 'morning-bg' : 'evening-bg'">
+                @if (slot.session === 'Morning') {
+                <i class="bi bi-sun-fill"></i>
+                } @else {
+                <i class="bi bi-moon-stars-fill"></i>
+                }
+              </div>
+
+              <div class="slot-time">
+                <span class="fw-bold" style="color: var(--text-title);">{{ slot.startTime }} - {{ slot.endTime }}</span>
+                <small class="d-block fw-medium" style="color: var(--text-small);">{{ slot.session }} Session</small>
+              </div>
+
+              @if (!slot.isBooked) {
+              <button class="btn-delete ms-auto" (click)="deleteSlot(slot)">
+                <i class="bi bi-trash3-fill"></i>
+              </button>
+              } @else {
+              <span class="badge bg-danger-subtle text-danger rounded-pill x-small ms-auto">Booked</span>
+              }
+            </div>
+          </div>
+          } @empty {
+          <div class="empty-state w-100 text-center py-5">
+            <i class="bi bi-calendar-x fs-1 opacity-25" style="color: var(--text-small);"></i>
+            <p class=" mt-2" style="color: var(--text-small);">No slots added yet for this day</p>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="d-flex justify-content-end gap-3 mt-5 pt-4 border-top">
+        <button class="btn btn-light px-4 rounded-pill fw-bold" (click)="loadDoctorData()">Reset</button>
+        <button class="btn btn-save px-5 rounded-pill shadow-sm fw-bold" (click)="saveSchedule()">
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

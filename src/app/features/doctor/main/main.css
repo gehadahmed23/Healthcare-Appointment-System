@@ -1,0 +1,121 @@
+.sidebar {
+  min-height: calc(100vh - 70px);
+  background-color: var(--bg-card);
+  z-index: 100;
+}
+
+.sidebar-logo-text {
+  background: linear-gradient(135deg, #4077dd, #ff76ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+h6 {
+  font-size: 0.7rem;
+  color: #002366;
+}
+
+/* h4.text-primary {
+  background: linear-gradient(135deg, #4077dd, #ff76ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+h4.text-primary::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(135deg, #4077dd, #ff76ac);
+  border-radius: 2px;
+} */
+
+.sidebar-sticky {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-light);
+  background-color: var(--bg-card);
+  z-index: 1000;
+}
+
+.sidebar .nav-link {
+  color: var(--text-title) !important;
+  font-weight: 500;
+  padding: 12px 20px;
+  margin: 4px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+}
+
+.sidebar .nav-link:hover {
+  background-color: var(--bg-header-2) !important;
+  color: var(--secondary-accent) !important;
+  transform: translateX(5px);
+}
+
+.sidebar .nav-link.active {
+  background-color: #f0f4ff !important;
+  color: #4077dd !important;
+  font-weight: 700;
+  border-left: 5px solid #4077dd;
+}
+
+.bg-light-soft {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+}
+
+@media (max-width: 991.98px) {
+  #patientSidebar,
+  #doctorSidebar,
+  #adminSidebar {
+    background-color: var(--bg-card) !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1050;
+    box-shadow: var(--dropdown-shadow);
+    left: 0;
+  }
+
+  .nav-link {
+    padding: 15px 25px;
+    border-bottom: 1px solid var(--border-extra-light);
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .sidebar .nav-link.active {
+    border-left: 8px solid #4077dd;
+  }
+}
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.sidebar .nav-link:hover i {
+  color: var(--secondary-accent);
+}
+
+.sidebar .nav-link.active i {
+  color: #4077dd;
+}

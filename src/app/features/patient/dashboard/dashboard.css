@@ -1,0 +1,109 @@
+.column-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.25rem;
+  border: 1px solid #f0f2f5;
+}
+
+.column-header h6 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.count-badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.bg-success-light {
+  background-color: #d1f7e4;
+}
+.bg-primary-light {
+  background-color: #e0ebff;
+}
+
+.scrollable-content {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+::ng-deep .slim-card .card {
+  border: 1px solid #f1f4f8 !important;
+  border-radius: 12px !important;
+  padding: 15px !important;
+  margin-bottom: 0 !important;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #a0aec0;
+  border: 2px dashed #f0f2f5;
+  border-radius: 12px;
+}
+
+@media (max-width: 991.98px) {
+  .scrollable-content {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .column-card {
+    margin-bottom: 10px;
+  }
+}
+
+.scrollable-past {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+}
+
+/* ستايل السكرول بار للـ Past */
+.scrollable-past::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollable-past::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.scrollable-past::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+@media (max-width: 991.98px) {
+  .scrollable-past {
+    max-height: 400px;
+  }
+}
+
+h2.fw-bold {
+  color: #051b4d;
+  letter-spacing: -0.5px;
+}
+
+.btn-primary {
+  background-color: #0d6bf8 !important;
+  border: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3139a1 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(63, 72, 204, 0.3) !important;
+}
+
+/* Ensure icons align perfectly */
+.bi-plus-lg::before {
+  stroke-width: 2px;
+}

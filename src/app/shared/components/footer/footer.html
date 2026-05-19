@@ -1,0 +1,87 @@
+@if(isHomePage){
+<footer class="footer-section p-4">
+  <div class="footer-container container-fluid bg-dark text-white rounded-5 p-5">
+    <div class="row gy-4">
+
+      <div class="col-lg-4">
+        <div class="brand mb-4 d-flex align-items-center gap-2">
+          <div class="logo-circle bg-white text-dark d-flex align-items-center justify-content-center">
+            <i class="bi bi-circle-half"></i>
+          </div>
+          <h3 class="fw-bold m-0">EverCare</h3>
+        </div>
+        <p class="text-secondary mb-5">Caring for You, Every Step <br> of the Way.</p>
+
+        <div class="social-links d-flex gap-2">
+          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-4">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <h6 class="fw-bold mb-4">Utility pages</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Password Protected</a></li>
+          <li><a href="#">404 Not Found</a></li>
+          <li><a href="#">Style Guide</a></li>
+          <li><a href="#">Licenses</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-4">Legal Links</h6>
+        <ul class="list-unstyled footer-links mb-5">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+
+        <div class="newsletter-box d-flex align-items-center p-1 rounded-pill border border-secondary">
+          <input type="email" class="form-control border-0 bg-transparent text-white px-3 shadow-none" placeholder="Email Address">
+          <button class="btn btn-white rounded-pill px-4 fw-bold">Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="mt-5 mb-4 border-secondary opacity-25">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="small text-secondary m-0">@copyright 2026, All Rights Reserved | Mariam & Gehad</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <div class="d-flex justify-content-md-end gap-4 mt-3 mt-md-0">
+          <a href="#" class="small text-secondary text-decoration-none">Privacy Policy</a>
+          <a href="#" class="small text-secondary text-decoration-none">Terms & Condition</a>
+          <a href="#" class="small text-secondary text-decoration-none">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+}@else{
+<footer class="p-3 border-top bg-white">
+  <div class="container-fluid">
+    <div class="text-center">
+      <p class="m-0 text-muted">
+        2026 © <span style="color: #2c3e50; font-weight: 500;">EverCare</span>, All Rights Reserved
+        | Mariam & Gehad
+      </p>
+    </div>
+  </div>
+</footer>
+}

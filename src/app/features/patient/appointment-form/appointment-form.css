@@ -1,0 +1,128 @@
+.text-dark-blue {
+  color: #2c3e50;
+}
+
+.text-purple-dark {
+  background: linear-gradient(135deg, #a29bfe, #ff76ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.bg-purple-light {
+  background-color: #fdeef1 !important;
+  color: #ff76ac !important;
+}
+
+.bg-light-soft {
+  background-color: #f8faff;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4ff;
+  color: #a29bfe;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  background-color: #ffffff !important;
+  border: 1px solid #a29bfe !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #a29bfe, #ff76ac) !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(162, 155, 254, 0.3);
+}
+
+.btn-primary-gradient:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(162, 155, 254, 0.4);
+}
+
+.btn-primary-gradient:disabled {
+  background: #cbd5e0 !important;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.deactive-container {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.deactive-icon-wrapper i {
+  color: #ff7675;
+  filter: drop-shadow(0 10px 15px rgba(255, 118, 117, 0.2));
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.support-contact-box {
+  background-color: #fdf2f4;
+  border: 1px dashed #ff76ac;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.support-contact-box p {
+  color: #2b2d42;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.support-contact-box i {
+  color: #ff76ac;
+  font-size: 1.2rem;
+}
+
+.deactive-title {
+  color: #2b2d42;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.deactive-text {
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

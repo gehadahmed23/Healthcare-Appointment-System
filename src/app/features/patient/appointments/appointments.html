@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="card shadow-sm overflow-hidden border-0">
+    <div class="card-header py-3 border-bottom d-none d-lg-block">
+      <div class="row fw-bold small text-uppercase letter-spacing" style="color:var(--text-small);">
+        <div class="col-4">Date & Time</div>
+        <div class="col-5">Doctor</div>
+        <div class="col-3 psts">Status</div>
+      </div>
+    </div>
+
+    <div class="card-body p-0">
+      @if(appointments && appointments.length > 0){
+      @for (item of appointments; track item.id) {
+      <app-appointment-card [appointment]="item" (delete)="prepareDelete($event)" (OnDelete)="ReloadData()">
+      </app-appointment-card>
+      }
+      } @else {
+      <div class="text-center py-5 bg-light">
+        <i class="bi bi-calendar-x display-4" style="color:var(--text-small);"></i>
+        <p class="mt-3 text-secondary">No appointments found.</p>
+      </div>
+      }
+    </div>
+  </div>
+</div>

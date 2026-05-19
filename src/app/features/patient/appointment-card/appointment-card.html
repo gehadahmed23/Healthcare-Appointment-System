@@ -1,0 +1,54 @@
+<div class="appointment-row py-3 px-4 border-bottom d-flex align-items-center">
+  <div class="col-datetime flex-grow-1">
+    <div class="fw-medium text-secondary">{{ appointment.date | date:'dd MMM yyyy' }} - {{ appointment.timeSlot }}</div>
+  </div>
+
+  <div class="col-doctor flex-grow-1">
+    <div class="d-flex align-items-center clickable-profile">
+      <img [src]="doctor?.avatar" class="rounded-circle me-3 border" alt="Doctor"
+        style="width: 45px; height: 45px; object-fit: cover;">
+      <div class="clickable-profile" [routerLink]="['/patient/doctor', doctor?.id]">
+        <div class="fw-bold doctor-name">{{ doctor?.name }}</div>
+        <div class=" small" style="color:var(--text-small);">{{ doctor?.specialization }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-status flex-grow-1  d-flex align-items-center ">
+    <span class="badge rounded-pill px-3 py-2" [ngClass]="{
+      'bg-success-light text-success': appointment.status === 'completed',
+      'bg-primary-light text-primary': appointment.status === 'confirmed',
+      'bg-warning-light text-warning': appointment.status === 'pending',
+      'bg-danger-light text-danger': appointment.status === 'cancelled'
+    }">
+      {{ appointment.status | titlecase }}
+    </span>
+  </div>
+  <div class="d-flex align-items-center justify-content-end">
+    <div class="dropdown">
+      <button class="btn btn-light btn-sm rounded-circle border-0 shadow-sm p-0" style="width: 32px; height: 32px;"
+        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-three-dots-vertical" style="color:var(--text-small); font-size: 0.9rem;"></i>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 py-1" style="min-width: 120px;">
+        @if(appointment.status === 'pending'){
+        <li>
+          <button class="dropdown-item py-1 px-3 d-flex align-items-center" (click)="onEdit(appointment.id)">
+            <i class="bi bi-pencil-square me-2 text-primary" style="font-size: 0.8rem;"></i>
+            <span class="small-text">Edit</span>
+          </button>
+        </li>
+        <li>
+          <hr class="dropdown-divider my-1 opacity-50">
+        </li>
+        }
+        <li>
+          <button class="dropdown-item py-2 px-3 d-flex align-items-center text-danger" data-bs-toggle="modal"
+            data-bs-target="#globalDeleteModal" (click)="confirmDelete()"> <i class="bi bi-trash3 me-2"></i>
+            <span class="small-text">Remove Record</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

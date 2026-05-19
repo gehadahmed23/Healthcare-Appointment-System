@@ -1,0 +1,153 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.main-wrapper {
+  padding-top: var(--header-height);
+}
+
+.bg-light-soft {
+  background-color: var(--bg-page);
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid var(--border-light);
+  border-radius: 50%;
+}
+
+.btn-ai-gradient {
+  background: linear-gradient(to right, #2e59d9, var(--status-success-text));
+  color: var(--text-on-btn);
+  border: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: calc(100vh - var(--header-height));
+  transition: all 0.3s ease;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-light);
+}
+
+.sidebar .nav-link {
+  color: var(--text-small) !important;
+  font-weight: 500;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary-soft) !important;
+}
+
+.sidebar .nav-link.active {
+  background-color: var(--bg-nav-active);
+  color: var(--text-primary-soft) !important;
+  font-weight: 600;
+}
+
+.doctor-card {
+  border-radius: 16px;
+  border: 1px solid var(--border-light) !important;
+  transition: all 0.3s ease;
+  background-color: var(--bg-card);
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--text-primary-soft) !important;
+  box-shadow: var(--sidebar-shadow) !important;
+}
+
+.avatar-wrapper img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--bg-page);
+}
+
+.text-dark-blue {
+  color: var(--text-title);
+}
+
+.text-purple,
+.text-purple-dark {
+  color: var(--text-primary-soft) !important;
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(135deg, var(--text-primary-soft), var(--secondary-accent)) !important;
+  color: var(--text-on-btn) !important;
+  border: none !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--sidebar-shadow);
+}
+
+.btn-primary-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--sidebar-shadow);
+}
+
+.btn-outline-purple {
+  color: var(--text-primary-soft);
+  border: 1px solid var(--bg-primary-soft);
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.btn-outline-purple:hover {
+  background: var(--bg-nav-active);
+}
+
+.badge.bg-purple-light {
+  background-color: var(--bg-header-2) !important;
+  color: var(--secondary-accent) !important;
+}
+
+.dropdown-menu {
+  animation: slideIn 0.2s ease-out;
+  border-radius: 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--dropdown-shadow);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clickable-profile {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.clickable-profile:hover {
+  opacity: 0.8;
+}
+
+.doctor-name:hover {
+  text-decoration: underline;
+  color: var(--text-primary-soft);
+}

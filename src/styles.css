@@ -1,0 +1,302 @@
+:root {
+  --bg-page: #f8faff;
+  --bg-card: #ffffff;
+  --bg-header-1: #f8faff;
+  --bg-header-2: #fdeef1;
+  --bg-hover: #fdf2f4;
+  --bg-nav-active: #f0f4ff;
+  --soft-bg: #f8faff;
+  --input-bg: #fcfcfc;
+  --stats-section-bg: #e3e4ff;
+  --error-bg-soft: #fffafa;
+  --morning-bg: #e3f2fd;
+  --evening-bg: #f3e8ff;
+  --btn-delete-bg: #fff1f2;
+
+  --text-title: #2c3e50;
+  --text-muted: #a29bfe;
+  --text-small: #6c757d;
+  --text-primary-soft: #4077dd;
+  --text-danger: #dc3545;
+  --text-on-btn: #ffffff;
+  --deactive-title: #2b2d42;
+  --notif-time: #94a3b8;
+  --morning-text: #0ea5e9;
+  --evening-text: #a855f7;
+
+  --primary-accent: #a29bfe;
+  --secondary-accent: #ff76ac;
+  --doctor-name-color: #8e85eb;
+
+  --brand-blue: #004691;
+  --brand-blue-hover: #0067d6;
+  --brand-blue-disabled: #b1d6ff;
+  --brand-pink: #ff1493;
+
+  --vibrant-blue: #4361ee;
+  --vibrant-blue-hover: #3a0ca3;
+
+  --mediva-purple: var(--text-primary-soft);
+  --mediva-pink: var(--secondary-accent);
+
+  --primary-gradient: linear-gradient(135deg, #4077dd, #ff76ac);
+  --hero-grad: linear-gradient(135deg, #60a2fe 10%, #fccbdc 50%, #fef3f6a6 100%);
+
+  --border-light: #f0f0f0;
+  --border-extra-light: #f8f9fa;
+  --border-hover: #f9c5d1;
+  --deactive-border: #f0f0f0;
+  --input-border: #e9ecef;
+
+  --card-shadow: rgba(0, 0, 0, 0.02);
+  --dropdown-shadow: rgba(0, 0, 0, 0.1);
+  --sidebar-shadow: rgba(162, 155, 254, 0.1);
+
+  --notif-dot-shadow: rgba(255, 118, 172, 0.5);
+  --bg-primary-soft: rgba(162, 155, 254, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --notif-unread: rgba(162, 155, 254, 0.08);
+
+  --status-primary-bg: #eef2ff;
+  --status-primary-text: #4d67fd;
+  --status-success-bg: #e6f7ef;
+  --status-success-text: #1cc88a;
+  --status-warning-bg: #fff9db;
+  --status-warning-text: #fab005;
+  --status-danger-bg: #fbe9e9;
+  --status-danger-text: #ff7675;
+
+  --bg-success-soft: rgba(34, 197, 94, 0.1);
+  --text-success-soft: #16a34a;
+  --medical-blue: #0ea5e9;
+  --bg-color: #f4f7fe;
+  --text-dark: #1e293b;
+
+  --status-active: #22c55e;
+  --status-inactive: #ef4444;
+  --patient-color: #06b6d4;
+  --doctor-color: #8b5cf6;
+  --admin-color: #f97316;
+
+  --header-bg: #ffffff;
+  --login-btn-color: #5b94ff;
+  --nav-link-color: #64748b;
+
+  --header-border: #f1f5f9;
+  --header-shadow: rgba(162, 155, 254, 0.05);
+
+  --btn-ai-gradient: linear-gradient(135deg, #a29bfe 0%, #ff76ac 100%);
+  --btn-ai-shadow: rgba(162, 155, 254, 0.3);
+  --btn-ai-shadow-hover: rgba(162, 155, 254, 0.4);
+
+  --profile-border: #f3f0ff;
+
+  --menu-title-color: #94a3b8;
+
+  --nav-active-bg: rgba(254, 155, 233, 0.1);
+  --nav-active-text: #5b94ff;
+
+  --submenu-border: rgba(162, 155, 254, 0.3);
+
+  --btn-dark-bg: #1e293b;
+
+  --notif-badge-shadow: rgba(255, 118, 172, 0.3);
+  --dropdown-shadow-strong: rgba(0, 0, 0, 0.1);
+
+  --notif-unread-soft: rgba(162, 155, 254, 0.05);
+  --bg-primary-soft-strong: rgba(162, 155, 254, 0.15);
+
+  --btn-login-shadow: rgba(91, 148, 255, 0.2);
+}
+
+[data-theme='dark'] {
+
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --bg-header-1: #1e293b;
+  --bg-header-2: #2d1f2b;
+  --bg-hover: #2d2438;
+  --bg-nav-active: #1e3a5f;
+  --soft-bg: #1e293b;
+  --input-bg: #263348;
+  --stats-section-bg: #1e1f3b;
+  --error-bg-soft: #2c1a1a;
+  --morning-bg: #0c2a42;
+  --evening-bg: #2d1b4d;
+  --btn-delete-bg: #3d1a1a;
+
+  --text-title: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-small: #cbd5e1;
+  --text-primary-soft: #60a5fa;
+  --text-danger: #ff6b6b;
+  --text-on-btn: #ffffff;
+  --deactive-title: #e2e8f0;
+  --notif-time: #64748b;
+  --morning-text: #38bdf8;
+  --evening-text: #c084fc;
+
+  --primary-accent: #818cf8;
+  --secondary-accent: #fb7185;
+  --doctor-name-color: #a78bfa;
+
+  --brand-blue: #60a5fa;
+  --brand-blue-hover: #93c5fd;
+  --brand-blue-disabled: #1e3a8a;
+  --brand-pink: #f472b6;
+
+  --vibrant-blue: #758bff;
+  --vibrant-blue-hover: #a5b4ff;
+
+  --mediva-purple: var(--text-primary-soft);
+  --mediva-pink: var(--secondary-accent);
+
+  --primary-gradient: linear-gradient(135deg, #8176f2, #e85a95);
+  --hero-grad: linear-gradient(135deg, #1e293b 10%, #4c1d95 50%, #0f172a 100%);
+
+  --border-light: #334155;
+  --border-extra-light: #1e293b;
+  --border-hover: #7c3d52;
+  --deactive-border: #334155;
+  --input-border: #475569;
+
+  --card-shadow: rgba(0, 0, 0, 0.4);
+  --dropdown-shadow: rgba(0, 0, 0, 0.5);
+  --sidebar-shadow: rgba(0, 0, 0, 0.6);
+
+  --notif-dot-shadow: rgba(255, 118, 172, 0.8);
+  --bg-primary-soft: rgba(96, 165, 250, 0.1);
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --notif-unread: rgba(255, 255, 255, 0.03);
+
+  --status-primary-bg: #1e3a6e;
+  --status-primary-text: #93c5fd;
+  --status-success-bg: #14532d;
+  --status-success-text: #4ade80;
+  --status-warning-bg: #78350f;
+  --status-warning-text: #fcd34d;
+  --status-danger-bg: #7f1d1d;
+  --status-danger-text: #fca5a5;
+
+  --bg-success-soft: rgba(34, 197, 94, 0.15);
+  --text-success-soft: #4ade80;
+  --medical-blue: #38bdf8;
+  --bg-color: #0f172a;
+  --text-dark: #f1f5f9;
+
+  --status-active: #4ade80;
+  --status-inactive: #f87171;
+  --patient-color: #22d3ee;
+  --doctor-color: #a78bfa;
+  --admin-color: #fb923c;
+
+  --header-bg: #1e293b;
+  --login-btn-color: #60a5fa;
+  --nav-link-color: #94a3b8;
+
+  --header-border: #334155;
+  --header-shadow: rgba(0, 0, 0, 0.4);
+
+  --btn-ai-gradient: linear-gradient(135deg, #818cf8 0%, #fb7185 100%);
+  --btn-ai-shadow: rgba(129, 140, 248, 0.4);
+  --btn-ai-shadow-hover: rgba(129, 140, 248, 0.6);
+
+  --profile-border: #334155;
+
+  --menu-title-color: #475569;
+
+  --nav-active-bg: rgba(255, 118, 172, 0.15);
+  --nav-active-text: #60a5fa;
+
+  --submenu-border: rgba(129, 140, 248, 0.4);
+
+  --btn-dark-bg: #0f172a;
+
+  --notif-badge-shadow: rgba(255, 118, 172, 0.5);
+  --dropdown-shadow-strong: rgba(0, 0, 0, 0.7);
+
+  --notif-unread-soft: rgba(129, 140, 248, 0.08);
+  --bg-primary-soft-strong: rgba(129, 140, 248, 0.2);
+
+  --btn-login-shadow: rgba(96, 165, 250, 0.3);
+
+}
+
+
+
+* {
+  font-family: 'Bitter', serif;
+}
+
+.empty-state {
+  background-color: var(--soft-bg);
+  color: var(--text-small);
+}
+
+.tangerine-bold {
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 70px;
+}
+
+.bitter-nav {
+  font-family: 'Bitter', serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.playwrite-au-qld-Lol {
+  font-family: 'Playwrite AU QLD', cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px !important;
+}
+
+.playwrite-au-qld-pop {
+  font-family: 'Playwrite AU QLD', cursive !important;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* .custom-gradient-color {
+  background: linear-gradient(135deg, #4361ee 80%, #ffc2d7 20%) !important;
+  color: white;
+} */
+
+.btn-grad {
+  background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 51%, #e7789d 100%);
+}
+
+.btn-grad {
+  padding: 10px 24px;
+  text-align: center;
+  background-size: 200% auto;
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blue-color {
+  color: #4077dd !important;
+}
+
+.custom-gradient-header {
+  background: linear-gradient(135deg, #4361ee 70%, #ffc2d7 30%) !important;
+  color: white;
+}

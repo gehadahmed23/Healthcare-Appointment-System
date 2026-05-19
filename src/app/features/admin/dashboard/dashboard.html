@@ -1,0 +1,191 @@
+<div class="container-fluid mt-4 px-0">
+  <div class="dashboard-container">
+    <h2 class="fw-bold text-dark mb-5" style="font-size: 1.75rem; color: #002366 !important;">
+    Admin Dashboard
+  </h2>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="icon-box doctor-icon"><i class="bi bi-person-badge"></i></div>
+            <span class="growth-badge">+{{stats.newDoctors}} new</span>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label mb-1">Total Doctors</p>
+            <h3 class="stat-value">{{stats.totalDoctors}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="icon-box patient-icon"><i class="bi bi-people"></i></div>
+            <span class="growth-badge">+{{stats.newPatients}} new</span>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label mb-1">Total Patients</p>
+            <h3 class="stat-value">{{stats.totalPatients}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="icon-box app-icon"><i class="bi bi-calendar-check"></i></div>
+            <span class="growth-badge">+{{stats.newAppointments}} new</span>
+          </div>
+          <div class="stat-body">
+            <p class="stat-label mb-1">Total Appointments</p>
+            <h3 class="stat-value">{{stats.totalAppointments}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9">
+
+        <div class="stat-card mb-5">
+          <h4 class="text-title mb-4">Appointment Statistics</h4>
+          <div class="row g-3 mb-4">
+            <div class="col">
+              <div class="mini-stat-card border-all">
+                <h6>{{ stats.totalAppointments }}</h6>
+                <p>Total</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mini-stat-card border-cancelled">
+                <h6>{{ stats.cancelled }}</h6>
+                <p>Cancelled</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mini-stat-card border-rescheduled">
+                <h6>{{ stats.rescheduled }}</h6>
+                <p>Reschedule</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mini-stat-card border-completed">
+                <h6>{{ stats.completed }}</h6>
+                <p>Done</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mini-stat-card border-ongoing">
+                <h6>{{ stats.ongoing }}</h6>
+                <p>Ongoing</p>
+              </div>
+            </div>
+          </div>
+          <div style="display: block; height: 300px;">
+            <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="side-panel">
+          <div class="stat-card shadow-sm">
+            <h6 class="fw-bold mb-4" style="color: #002366;">
+              <i class="bi bi-award me-2 text-warning"></i>Popular Doctors
+            </h6>
+
+            <div class="doctor-list">
+              @for (doctor of topDoctors; track doctor.name) {
+              @if (doctor.count > 0) { <div class="d-flex align-items-center mb-4 p-2 border-bottom hover-doctor">
+                <div class="position-relative">
+                  <img [src]="doctor.image" class="rounded-circle me-3 border border-2 border-primary" width="50"
+                    height="50" alt="doctor photo">
+                  <span class="position-absolute bottom-0 end-0 badge rounded-pill bg-success"
+                    style="width: 12px; height:12px; border: 2px solid white; padding: 0;">
+                  </span>
+                </div>
+
+                <div class="flex-grow-1">
+                  <p class="mb-0 fw-bold" style="font-size: 0.9rem; color: #1e293b;">
+                    {{ doctor.name }}
+                  </p>
+                  <small class="text-muted">{{ doctor.specialty }}</small>
+                </div>
+
+                <div class="text-end">
+                  <span class="badge bg-light text-primary border border-primary-subtle rounded-pill">
+                    {{ doctor.count }} App.
+                  </span>
+                </div>
+              </div>
+              }
+              } @empty {
+              <div class="text-center text-muted py-3">No active bookings yet</div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="d-flex align-items-center justify-content-between mb-1 p-2 bg-white shadow-sm rounded-3 border-start border-primary border-4">
+      <span class="fw-bold text-dark ms-2">Appointments Overview</span>
+      <span class="badge bg-primary px-3 py-2">Total: {{ totalAppointmentsCount }}</span>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-lg-6 col-12">
+        <div class="column-card shadow-sm h-100">
+          <div class="column-header d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0 text-success"><i class="bi bi-lightning-fill me-2"></i>Today</h6>
+            <span class="count-badge bg-success-light text-success">{{ todayAppointments.length }}</span>
+          </div>
+          <div class="scrollable-content">
+            @if(todayAppointments.length > 0){
+            @for (item of todayAppointments; track item.id) {
+            <app-appointment-card class="slim-card mb-2" [appointment]="item"></app-appointment-card>
+            }
+            } @else { <div class="empty-state">No appointments for today</div> }
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-12">
+        <div class="column-card shadow-sm h-100">
+          <div class="column-header d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0 text-primary"><i class="bi bi-calendar3 me-2"></i>Upcoming</h6>
+            <span class="count-badge bg-primary-light text-primary">{{ upcomingAppointments.length }}</span>
+          </div>
+          <div class="scrollable-content">
+            @if(upcomingAppointments.length > 0){
+            @for (item of upcomingAppointments; track item.id) {
+            <app-appointment-card class="slim-card mb-2" [appointment]="item"></app-appointment-card>
+            }
+            } @else { <div class="empty-state">No upcoming found</div> }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="column-card shadow-sm">
+          <div class="column-header d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+            <h6 class="fw-bold mb-0 text-secondary"><i class="bi bi-clock-history me-2"></i>Past History</h6>
+            <span class="count-badge bg-light text-secondary">{{ pastAppointments.length }} Records</span>
+          </div>
+          <div class="scrollable-past px-2">
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+              @for (item of pastAppointments; track item.id) {
+              <div class="col opacity-75">
+                <app-appointment-card class="slim-card" [appointment]="item"></app-appointment-card>
+              </div>
+              }
+            </div>
+            @if(pastAppointments.length === 0) { <div class="empty-state">No history recorded</div> }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

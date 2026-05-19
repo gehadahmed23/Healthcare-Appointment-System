@@ -1,0 +1,38 @@
+<div class="card h-100 shadow-sm border-0 patient-card">
+  <div class="card-body p-3">
+    <div class="d-flex align-items-center mb-3">
+      <div class="avatar-container me-3">
+        <img [src]="patient.avatar"
+             [alt]="patient.name"
+             class="rounded-circle img-fluid shadow-sm">
+      </div>
+      <div class="flex-grow-1">
+        <div class="d-flex justify-content-between align-items-start">
+          <h5 class="card-title fw-bold mb-0 text-dark">{{ patient.name }}</h5>
+          <span class="badge" [ngClass]="patient.isActive !== false ? 'text-success' : 'text-danger'">
+            {{ patient.isActive !== false ? 'Active' : 'Deactive' }}
+          </span>
+        </div>
+        <p class="text-muted small mb-0">{{ patient.role | titlecase }}</p>
+      </div>
+    </div>
+
+    <div class="patient-details pt-2 border-top">
+      <div class="d-flex align-items-center mb-2">
+        <i class="bi bi-envelope-at me-2 text-primary"></i>
+        <span class="small text-secondary">{{ patient.email }}</span>
+      </div>
+      <div class="d-flex align-items-center mb-2">
+        <i class="bi bi-telephone me-2 text-primary"></i>
+        <span class="small text-secondary">{{ patient.phone }}</span>
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-calendar3 me-2 text-primary"></i>
+        <span class="small text-muted">Joined: {{ patient.createdAt | date:'shortDate' }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent border-0 text-end pb-3">
+    <button class="btn btn-outline-primary btn-sm rounded-pill px-3" [routerLink]="['/admin/patients', patient.id]">View Profile</button>
+  </div>
+</div>

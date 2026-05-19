@@ -1,0 +1,80 @@
+.footer-container {
+  background-color: #111111 !important;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logo-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+.newsletter-box {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-box input::placeholder {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-white {
+  background: #ffffff;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+}
+
+.btn-white:hover {
+  background: #f0f0f0;
+}
+.rounded-5 {
+  border-radius: 40px !important;
+}
+footer:not(.footer-section) {
+  background-color: #ffffff;
+  padding: 15px 0;
+}
+
+footer:not(.footer-section) p {
+  font-size: 14px;
+  color: #333;
+}
+
+footer:not(.footer-section) span {
+  color: #4c46af;
+}
