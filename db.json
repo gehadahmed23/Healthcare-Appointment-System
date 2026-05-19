@@ -1,0 +1,3000 @@
+{
+  "users": [
+    {
+      "id": "111",
+      "name": "Admin User",
+      "email": "admin@health.com",
+      "password": "admin123",
+      "phone": "01000000000",
+      "role": "admin",
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Ahmed Hassan",
+      "email": "ahmed@doctor.com",
+      "password": "doctor123",
+      "phone": "01011111111",
+      "role": "doctor",
+      "price": 500,
+      "specialization": "cardiologist",
+      "experience": 15,
+      "bio": "Experienced cardiologist with 10 years in heart care.",
+      "avatar": "images/doctors/1.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "09:00",
+          "endTime": "09:30",
+          "isBooked": true
+        },
+        {
+          "day": "Sunday",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "isBooked": true
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "14:00",
+          "endTime": "14:30",
+          "isBooked": true
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "14:30",
+          "endTime": "15:00",
+          "isBooked": true
+        },
+        {
+          "day": "Friday",
+          "startTime": "13:20",
+          "endTime": "13:35",
+          "session": "Evening",
+          "isBooked": false
+        },
+        {
+          "day": "Friday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Sunday",
+          "startTime": "09:30",
+          "endTime": "10:00",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "20:00",
+          "endTime": "20:20",
+          "isBooked": false
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "09:00",
+          "endTime": "09:20",
+          "session": "Evening",
+          "isBooked": true
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "10:00",
+          "endTime": "10:20",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Friday",
+          "startTime": "10:00",
+          "endTime": "10:20",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "session": "Morning",
+          "isBooked": false
+        },
+        {
+          "day": "Monday",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "session": "Evening",
+          "isBooked": false
+        },
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "session": "Evening",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "session": "Morning",
+          "isBooked": false
+        },
+        {
+          "day": "Saturday",
+          "startTime": "13:10",
+          "endTime": "13:25",
+          "session": "Morning",
+          "isBooked": true
+        },
+        {
+          "day": "Friday",
+          "startTime": "11:00",
+          "endTime": "00:00",
+          "session": "Morning",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 126,
+      "createdAt": "2026-03-15"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Sara Mohamed",
+      "email": "sara@doctor.com",
+      "password": "doctor123",
+      "phone": "0102222",
+      "role": "doctor",
+      "price": 500,
+      "specialization": "Dermatology",
+      "experience": 7,
+      "bio": "Skin care specialist focused on treating acne, eczema, and cosmetic dermatology.",
+      "avatar": "images/doctors/2.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "isBooked": false
+        },
+        {
+          "day": "Monday",
+          "startTime": "10:30",
+          "endTime": "11:00",
+          "isBooked": true
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "13:00",
+          "endTime": "13:30",
+          "isBooked": true
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 86,
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "4",
+      "name": "Mohamed Ali",
+      "email": "mohamed@patient.com",
+      "password": "patient123",
+      "phone": "01033333555",
+      "role": "patient",
+      "avatar": "images/patient/8.webp",
+      "createdAt": "2026-03-01",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Fatma Ibrahim",
+      "email": "fatma@patient.com",
+      "password": "patient123",
+      "phone": "01044444444",
+      "role": "patient",
+      "avatar": "images/patient/user-02.jpg",
+      "createdAt": "2026-03-10",
+      "isActive": false
+    },
+    {
+      "id": "6",
+      "name": "Dr. Ola Youssef",
+      "email": "khaled.y@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000001",
+      "role": "doctor",
+      "price": 200,
+      "specialization": "Orthopedic Surgeon",
+      "experience": 12,
+      "bio": "Specialist in bone fractures and joint replacement.",
+      "avatar": "images/doctors/3.webp",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "isBooked": true
+        },
+        {
+          "day": "Saturday",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "isBooked": true
+        },
+        {
+          "day": "Monday",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "isBooked": true
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 200,
+      "createdAt": "2026-03-05"
+    },
+    {
+      "id": "7",
+      "name": "Dr. Magdy El-Sayed",
+      "email": "mona.s@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000002",
+      "role": "doctor",
+      "price": 1000,
+      "specialization": "Pediatrician",
+      "experience": 8,
+      "bio": "Caring for infants and children with a friendly approach.",
+      "avatar": "images/doctors/4.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "isBooked": true
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "isBooked": true
+        },
+        {
+          "day": "Thursday",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "isBooked": true
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 150,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "8",
+      "name": "Dr. Noha Ramzy",
+      "email": "hany.r@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000003",
+      "role": "doctor",
+      "price": 600,
+      "specialization": "Gynecologist",
+      "experience": 15,
+      "bio": "Expert in maternal-fetal medicine and reproductive health.",
+      "avatar": "images/doctors/5.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "isBooked": true
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "isBooked": true
+        },
+        {
+          "day": "Friday",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 180,
+      "createdAt": "2026-01-12"
+    },
+    {
+      "id": "9",
+      "name": "Dr. Nadi Kamal",
+      "email": "nadia.k@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000004",
+      "role": "doctor",
+      "price": 450,
+      "specialization": "Psychiatrist",
+      "experience": 20,
+      "bio": "Specializing in anxiety, depression, and family therapy.",
+      "avatar": "images/doctors/6.webp",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "isBooked": false
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 310,
+      "createdAt": "2026-01-15"
+    },
+    {
+      "id": "10",
+      "name": "Dr. Toqa Fouad",
+      "email": "tarek.f@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000005",
+      "role": "doctor",
+      "price": 200,
+      "specialization": "Neurosurgeon",
+      "experience": 25,
+      "bio": "Advanced brain and spinal surgery expert.",
+      "avatar": "images/doctors/7.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "08:00",
+          "endTime": "10:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "08:00",
+          "endTime": "10:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 5,
+      "reviewCount": 90,
+      "createdAt": "2026-01-18"
+    },
+    {
+      "id": "11",
+      "name": "Dr. Laila Helmy",
+      "email": "laila.h@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000006",
+      "role": "doctor",
+      "price": 350,
+      "specialization": "Oncologist",
+      "experience": 11,
+      "bio": "Compassionate care for cancer treatment and therapy.",
+      "avatar": "images/doctors/8.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "10:30",
+          "isBooked": true
+        },
+        {
+          "day": "Thursday",
+          "startTime": "09:00",
+          "endTime": "10:30",
+          "isBooked": true
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 115,
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "12",
+      "name": "Dr. Asmaa Refaat",
+      "email": "amgad.r@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000007",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "Pulmonologist",
+      "experience": 9,
+      "bio": "Respiratory system expert, treating asthma and COPD.",
+      "avatar": "images/doctors/9.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "14:00",
+          "endTime": "15:30",
+          "isBooked": true
+        },
+        {
+          "day": "Thursday",
+          "startTime": "14:00",
+          "endTime": "15:30",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 78,
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "13",
+      "name": "Dr. Sherif Gad",
+      "email": "sherif.g@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000008",
+      "role": "doctor",
+      "price": 500,
+      "specialization": "Urologist",
+      "experience": 14,
+      "bio": "Specialist in kidney stones and urinary tract health.",
+      "avatar": "images/doctors/10.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "17:00",
+          "endTime": "18:30",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "17:00",
+          "endTime": "18:30",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 130,
+      "createdAt": "2026-03-25"
+    },
+    {
+      "id": "14",
+      "name": "Dr. Yasmin Nour",
+      "email": "yasmin.n@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000009",
+      "role": "doctor",
+      "price": 450,
+      "specialization": "cardiologist",
+      "experience": 6,
+      "bio": "Focusing on preventative cardiology and heart health.",
+      "avatar": "images/doctors/11.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "isBooked": true
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.4,
+      "reviewCount": 60,
+      "createdAt": "2026-03-28"
+    },
+    {
+      "id": "15",
+      "name": "Dr. Ibrahim Salem",
+      "email": "ibrahim.s@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000010",
+      "role": "doctor",
+      "price": 850,
+      "specialization": "Orthopedic Surgeon",
+      "experience": 18,
+      "bio": "Sports medicine and ligament reconstruction specialist.",
+      "avatar": "images/doctors/12.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 240,
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "16",
+      "name": "Dr. Ali Zaki",
+      "email": "fatma.z@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000011",
+      "role": "doctor",
+      "price": 900,
+      "specialization": "Pediatrician",
+      "experience": 5,
+      "bio": "Dedicated to child health and vaccination programs.",
+      "avatar": "images/doctors/13.webp",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        },
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 45,
+      "createdAt": "2026-03-05"
+    },
+    {
+      "id": "17",
+      "name": "Dr. Omar Bassiouny",
+      "email": "omar.b@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000012",
+      "role": "doctor",
+      "price": 150,
+      "specialization": "Gynecologist",
+      "experience": 13,
+      "bio": "Expert in fertility treatments and obstetric care.",
+      "avatar": "images/doctors/14.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 110,
+      "createdAt": "2026-03-08"
+    },
+    {
+      "id": "18",
+      "name": "Dr. Islam Magdy",
+      "email": "sara.m@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000013",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "Psychiatrist",
+      "experience": 10,
+      "bio": "Psychotherapy and mental health consultant.",
+      "avatar": "images/doctors/15.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 88,
+      "createdAt": "2026-03-10"
+    },
+    {
+      "id": "20",
+      "name": "Dr. Hana Ezzat",
+      "email": "hana.e@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000015",
+      "role": "doctor",
+      "price": 200,
+      "specialization": "Oncologist",
+      "experience": 12,
+      "bio": "Hematology and oncology specialist.",
+      "avatar": "images/doctors/2.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 96,
+      "createdAt": "2026-03-15"
+    },
+    {
+      "id": "21",
+      "name": "Dr. Dina Gamal",
+      "email": "ahmed.g@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000016",
+      "role": "doctor",
+      "price": 650,
+      "specialization": "Pulmonologist",
+      "experience": 7,
+      "bio": "Treating critical lung conditions and sleep apnea.",
+      "avatar": "images/doctors/3.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.4,
+      "reviewCount": 55,
+      "createdAt": "2026-03-18"
+    },
+    {
+      "id": "22",
+      "name": "Dr. Alaa Adel",
+      "email": "eman.a@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000017",
+      "role": "doctor",
+      "price": 750,
+      "specialization": "Urologist",
+      "experience": 10,
+      "bio": "Expert in pediatric urology and robotic surgery.",
+      "avatar": "images/doctors/4.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "isBooked": false
+        },
+        {
+          "day": "Friday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 82,
+      "createdAt": "2026-03-20"
+    },
+    {
+      "id": "23",
+      "name": "Dr. Hala Bakr",
+      "email": "mostafa.b@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000018",
+      "role": "doctor",
+      "price": 600,
+      "specialization": "cardiologist",
+      "experience": 22,
+      "bio": "Senior consultant in interventional cardiology.",
+      "avatar": "images/doctors/5.webp",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "12:00",
+          "endTime": "14:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "12:00",
+          "endTime": "14:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 5,
+      "reviewCount": 400,
+      "createdAt": "2026-03-22"
+    },
+    {
+      "id": "24",
+      "name": "Dr. Tarek Saleh",
+      "email": "reem.s@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000019",
+      "role": "doctor",
+      "price": 300,
+      "specialization": "Orthopedic Surgeon",
+      "experience": 9,
+      "bio": "Specializing in hand and upper limb surgery.",
+      "avatar": "images/doctors/6.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 76,
+      "createdAt": "2026-02-25"
+    },
+    {
+      "id": "25",
+      "name": "Dr. Kareema Aziz",
+      "email": "kareem.a@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000020",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "Pediatrician",
+      "experience": 14,
+      "bio": "Pediatric cardiologist and general health expert.",
+      "avatar": "images/doctors/7.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 190,
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "26",
+      "name": "Dr. Aliaa Hamed",
+      "email": "aliaa.h@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000021",
+      "role": "doctor",
+      "price": 250,
+      "specialization": "Gynecologist",
+      "experience": 10,
+      "bio": "Laparoscopic surgery and women wellness.",
+      "avatar": "images/doctors/8.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 85,
+      "createdAt": "2026-03-03"
+    },
+    {
+      "id": "27",
+      "name": "Dr. Fatmaa Amin",
+      "email": "walid.a@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000022",
+      "role": "doctor",
+      "price": 350,
+      "specialization": "Psychiatrist",
+      "experience": 12,
+      "bio": "Expert in addiction medicine and recovery.",
+      "avatar": "images/doctors/9.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "19:00",
+          "endTime": "21:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "19:00",
+          "endTime": "21:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 112,
+      "createdAt": "2026-03-05"
+    },
+    {
+      "id": "28",
+      "name": "Dr.Mohy Maher",
+      "email": "noha.m@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000023",
+      "role": "doctor",
+      "price": 500,
+      "specialization": "Neurosurgeon",
+      "experience": 11,
+      "bio": "Focusing on pediatric neurosurgery.",
+      "avatar": "images/doctors/10.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "10:00",
+          "endTime": "13:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "10:00",
+          "endTime": "13:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 68,
+      "createdAt": "2026-03-07"
+    },
+    {
+      "id": "29",
+      "name": "Dr. Saida Galal",
+      "email": "said.g@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000024",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "Oncologist",
+      "experience": 17,
+      "bio": "Consultant of radiotherapy and surgical oncology.",
+      "avatar": "images/doctors/11.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        },
+        {
+          "day": "Friday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 210,
+      "createdAt": "2026-03-09"
+    },
+    {
+      "id": "30",
+      "name": "Dr. Fady Nour",
+      "email": "fatma.n@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000025",
+      "role": "doctor",
+      "price": 200,
+      "specialization": "Pulmonologist",
+      "experience": 8,
+      "bio": "Expert in pulmonary hypertension and lung fibrosis.",
+      "avatar": "images/doctors/12.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": true
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 42,
+      "createdAt": "2026-03-11"
+    },
+    {
+      "id": "31",
+      "name": "Dr. Osama Hafez",
+      "email": "osama.h@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000026",
+      "role": "doctor",
+      "price": 350,
+      "specialization": "Urologist",
+      "experience": 13,
+      "bio": "Specialist in male infertility and urogenital health.",
+      "avatar": "images/doctors/13.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 105,
+      "createdAt": "2026-03-13"
+    },
+    {
+      "id": "32",
+      "name": "Dr. Mahdy El-Ghandour",
+      "email": "may.g@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000027",
+      "role": "doctor",
+      "price": 600,
+      "specialization": "cardiologist",
+      "experience": 11,
+      "bio": "Electro-physiology and heart rhythm specialist.",
+      "avatar": "images/doctors/14.webp",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "13:00",
+          "endTime": "15:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 118,
+      "createdAt": "2026-03-15"
+    },
+    {
+      "id": "33",
+      "name": "Dr. Bassem Wahba",
+      "email": "bassem.w@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000028",
+      "role": "doctor",
+      "price": 550,
+      "specialization": "Orthopedic Surgeon",
+      "experience": 20,
+      "bio": "Spinal deformity and scoliosis surgery expert.",
+      "avatar": "images/doctors/15.webp",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "11:00",
+          "endTime": "14:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "11:00",
+          "endTime": "14:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 350,
+      "createdAt": "2026-03-17"
+    },
+    {
+      "id": "34",
+      "name": "Dr. Diaa Shaker",
+      "email": "dina.s@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000029",
+      "role": "doctor",
+      "price": 250,
+      "specialization": "Pediatrician",
+      "experience": 7,
+      "bio": "Specialist in pediatric nutrition and growth.",
+      "avatar": "images/doctors/1.webp",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 64,
+      "createdAt": "2026-03-19"
+    },
+    {
+      "id": "35",
+      "name": "Dr. Magida Yacoub Jr.",
+      "email": "magdy.jr@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000030",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "cardiologist",
+      "experience": 5,
+      "bio": "Heart transplant and structural heart disease.",
+      "avatar": "images/doctors/2.webp",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "08:00",
+          "endTime": "10:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "08:00",
+          "endTime": "10:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 40,
+      "createdAt": "2026-03-21"
+    },
+    {
+      "id": "36",
+      "name": "Dr. Heba Roushdy",
+      "email": "heba.r@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000031",
+      "role": "doctor",
+      "price": 350,
+      "specialization": "Gynecologist",
+      "experience": 16,
+      "avatar": "images/doctors/3.webp",
+      "bio": "High-risk pregnancy and ultrasound specialist.",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "15:00",
+          "endTime": "17:00",
+          "isBooked": false
+        },
+        {
+          "day": "Friday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 160,
+      "createdAt": "2026-03-23"
+    },
+    {
+      "id": "37",
+      "name": "Dr. Amr Diab",
+      "email": "amr.d@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000032",
+      "role": "doctor",
+      "price": 300,
+      "specialization": "Psychiatrist",
+      "experience": 9,
+      "avatar": "images/doctors/4.webp",
+      "bio": "Child and adolescent mental health expert.",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "16:00",
+          "endTime": "18:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.5,
+      "reviewCount": 72,
+      "createdAt": "2026-03-25"
+    },
+    {
+      "id": "38",
+      "name": "Dr. Karim Fouad",
+      "email": "karim.f@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000033",
+      "role": "doctor",
+      "price": 200,
+      "specialization": "Neurosurgeon",
+      "experience": 14,
+      "avatar": "images/doctors/5.webp",
+      "bio": "Minimally invasive spine surgery.",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        },
+        {
+          "day": "Tuesday",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "createdAt": "2026-03-27"
+    },
+    {
+      "id": "39",
+      "name": "Dr. Salam Khalil",
+      "email": "salma.k@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000034",
+      "role": "doctor",
+      "price": 150,
+      "specialization": "Oncologist",
+      "experience": 10,
+      "avatar": "images/doctors/6.webp",
+      "bio": "Breast cancer research and treatment.",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.8,
+      "reviewCount": 102,
+      "createdAt": "2026-03-29"
+    },
+    {
+      "id": "40",
+      "name": "Dr. Aziza Ezz",
+      "email": "ahmed.e@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000035",
+      "role": "doctor",
+      "price": 400,
+      "specialization": "Pulmonologist",
+      "experience": 12,
+      "avatar": "images/doctors/7.webp",
+      "bio": "Intensive care and lung physiology.",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "17:00",
+          "endTime": "19:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.6,
+      "reviewCount": 91,
+      "createdAt": "2026-03-30"
+    },
+    {
+      "id": "41",
+      "name": "Dr. Ola Mansour",
+      "email": "ola.m@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000036",
+      "role": "doctor",
+      "price": 300,
+      "specialization": "Urologist",
+      "experience": 6,
+      "avatar": "images/doctors/8.webp",
+      "bio": "General urology and bladder health.",
+      "availableSlots": [
+        {
+          "day": "Sunday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "10:00",
+          "endTime": "12:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.4,
+      "reviewCount": 38,
+      "createdAt": "2026-04-01"
+    },
+    {
+      "id": "42",
+      "name": "Dr. Fadia Mikhail",
+      "email": "fady.m@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000037",
+      "role": "doctor",
+      "price": 450,
+      "specialization": "cardiologist",
+      "experience": 15,
+      "avatar": "images/doctors/9.webp",
+      "bio": "Heart failure management and vascular medicine.",
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "14:00",
+          "endTime": "16:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 175,
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": "43",
+      "name": "Dr. Gehad Abdelkader",
+      "email": "ghada.a@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000038",
+      "role": "doctor",
+      "price": 250,
+      "specialization": "Orthopedic Surgeon",
+      "experience": 13,
+      "avatar": "images/doctors/10.webp",
+      "bio": "Shoulder and knee arthroscopy expert.",
+      "availableSlots": [
+        {
+          "day": "Tuesday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        },
+        {
+          "day": "Friday",
+          "startTime": "09:00",
+          "endTime": "11:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.7,
+      "reviewCount": 114,
+      "createdAt": "2026-04-03"
+    },
+    {
+      "id": "44",
+      "name": "Dr. Hasnaa El-Banna",
+      "email": "hassan.b@doctor.com",
+      "password": "doctor123",
+      "phone": "01050000039",
+      "role": "doctor",
+      "price": 500,
+      "specialization": "Pediatrician",
+      "experience": 19,
+      "avatar": "images/doctors/11.webp",
+      "bio": "General pediatrics and neonatal intensive care.",
+      "availableSlots": [
+        {
+          "day": "Saturday",
+          "startTime": "10:00",
+          "endTime": "13:00",
+          "isBooked": false
+        },
+        {
+          "day": "Wednesday",
+          "startTime": "10:00",
+          "endTime": "13:00",
+          "isBooked": false
+        }
+      ],
+      "rating": 4.9,
+      "reviewCount": 260,
+      "createdAt": "2026-04-04"
+    },
+    {
+      "id": "46",
+      "name": "Ali Hassan",
+      "email": "ali.h@patient.com",
+      "password": "patient123",
+      "phone": "01060000001",
+      "role": "patient",
+      "avatar": "images/patient/1.webp",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "47",
+      "name": "Zainab Ahmed",
+      "email": "zainab.a@patient.com",
+      "password": "patient123",
+      "phone": "01060000002",
+      "role": "patient",
+      "avatar": "images/patient/2.webp",
+      "createdAt": "2026-04-11"
+    },
+    {
+      "id": "48",
+      "name": "Omar Khaled",
+      "email": "omar.k@patient.com",
+      "password": "patient123",
+      "phone": "01060000003",
+      "role": "patient",
+      "avatar": "images/patient/3.webp",
+      "createdAt": "2026-04-12"
+    },
+    {
+      "id": "49",
+      "name": "Lina Mahmoud",
+      "email": "lina.m@patient.com",
+      "password": "patient123",
+      "phone": "01060000004",
+      "role": "patient",
+      "avatar": "images/patient/4.webp",
+      "createdAt": "2026-04-13",
+      "isActive": false
+    },
+    {
+      "id": "50",
+      "name": "Youssef Ibrahim",
+      "email": "youssef.i@patient.com",
+      "password": "patient123",
+      "phone": "01060000005",
+      "role": "patient",
+      "avatar": "images/patient/5.webp",
+      "createdAt": "2026-04-14"
+    },
+    {
+      "id": "51",
+      "name": "Nour El-Din",
+      "email": "nour.e@patient.com",
+      "password": "patient123",
+      "phone": "01060000006",
+      "role": "patient",
+      "avatar": "images/patient/6.webp",
+      "createdAt": "2026-04-15"
+    },
+    {
+      "id": "52",
+      "name": "Mariam Said",
+      "email": "mariam.s@patient.com",
+      "password": "patient123",
+      "phone": "01060000007",
+      "role": "patient",
+      "avatar": "images/patient/7.webp",
+      "createdAt": "2026-04-16"
+    },
+    {
+      "id": "53",
+      "name": "Mostafa Amgad",
+      "email": "mostafa.a@patient.com",
+      "password": "patient123",
+      "phone": "01060000008",
+      "role": "patient",
+      "avatar": "images/patient/8.webp",
+      "createdAt": "2026-04-17"
+    },
+    {
+      "id": "54",
+      "name": "Salma Tarek",
+      "email": "salma.t@patient.com",
+      "password": "patient123",
+      "phone": "01060000009",
+      "role": "patient",
+      "avatar": "images/patient/9.webp",
+      "createdAt": "2026-04-18"
+    },
+    {
+      "id": "55",
+      "name": "Kareem Hamdy",
+      "email": "kareem.ha@patient.com",
+      "password": "patient123",
+      "phone": "01060000010",
+      "role": "patient",
+      "avatar": "images/patient/10.webp",
+      "createdAt": "2026-04-19"
+    },
+    {
+      "id": "56",
+      "name": "Hana Yasser",
+      "email": "hana.y@patient.com",
+      "password": "patient123",
+      "phone": "01060000011",
+      "role": "patient",
+      "avatar": "images/patient/4.webp",
+      "createdAt": "2026-04-20",
+      "isActive": false
+    },
+    {
+      "id": "57",
+      "name": "Sherif Mounir",
+      "email": "sherif.m@patient.com",
+      "password": "patient123",
+      "phone": "01060000012",
+      "role": "patient",
+      "avatar": "images/patient/8.webp",
+      "createdAt": "2026-04-21"
+    },
+    {
+      "id": "58",
+      "name": "Aya Roushdy",
+      "email": "aya.r@patient.com",
+      "password": "patient123",
+      "phone": "01060000013",
+      "role": "patient",
+      "avatar": "images/patient/2.webp",
+      "createdAt": "2026-04-22"
+    },
+    {
+      "id": "59",
+      "name": "Walid Gamal",
+      "email": "walid.g@patient.com",
+      "password": "patient123",
+      "phone": "01060000014",
+      "role": "patient",
+      "avatar": "images/patient/6.webp",
+      "createdAt": "2026-04-23"
+    },
+    {
+      "id": "60",
+      "name": "Dina Fouad",
+      "email": "dina.f@patient.com",
+      "password": "patient123",
+      "phone": "01060000015",
+      "role": "patient",
+      "avatar": "images/patient/1.webp",
+      "createdAt": "2026-04-24",
+      "isActive": false
+    },
+    {
+      "id": "61",
+      "name": "Hany Adel",
+      "email": "hany.a@patient.com",
+      "password": "patient123",
+      "phone": "01060000016",
+      "role": "patient",
+      "avatar": "images/patient/9.webp",
+      "createdAt": "2026-04-25"
+    },
+    {
+      "id": "62",
+      "name": "Eman Reda",
+      "email": "eman.r@patient.com",
+      "password": "patient123",
+      "phone": "01060000017",
+      "role": "patient",
+      "avatar": "images/patient/5.webp",
+      "createdAt": "2026-04-26"
+    },
+    {
+      "id": "63",
+      "name": "Tamer Hosny",
+      "email": "tamer.h@patient.com",
+      "password": "patient123",
+      "phone": "01060000018",
+      "role": "patient",
+      "avatar": "images/patient/10.webp",
+      "createdAt": "2026-04-27",
+      "isActive": true
+    },
+    {
+      "id": "64",
+      "name": "Ghada Adel",
+      "email": "ghada.a2@patient.com",
+      "password": "patient123",
+      "phone": "01060000019",
+      "role": "patient",
+      "avatar": "images/patient/3.webp",
+      "createdAt": "2026-04-28"
+    },
+    {
+      "id": "65",
+      "name": "Maged El-Kedwany",
+      "email": "maged.k@patient.com",
+      "password": "patient123",
+      "phone": "01060000020",
+      "role": "patient",
+      "avatar": "images/patient/7.webp",
+      "createdAt": "2026-04-29"
+    },
+    {
+      "id": "66",
+      "name": "Asmaa Galal",
+      "email": "asmaa.g@patient.com",
+      "password": "patient123",
+      "phone": "01060000021",
+      "role": "patient",
+      "avatar": "images/patient/4.webp",
+      "createdAt": "2026-04-30"
+    },
+    {
+      "id": "67",
+      "name": "Mohamed Emam",
+      "email": "mohamed.e@patient.com",
+      "password": "patient123",
+      "phone": "01060000022",
+      "role": "patient",
+      "avatar": "images/patient/8.webp",
+      "createdAt": "2026-05-01"
+    },
+    {
+      "id": "68",
+      "name": "Yasmine Sabri",
+      "email": "yasmine.s@patient.com",
+      "password": "patient123",
+      "phone": "01060000023",
+      "role": "patient",
+      "avatar": "images/patient/2.webp",
+      "createdAt": "2026-05-02"
+    },
+    {
+      "id": "69",
+      "name": "Ahmed Helmy",
+      "email": "ahmed.h2@patient.com",
+      "password": "patient123",
+      "phone": "01060000024",
+      "role": "patient",
+      "avatar": "images/patient/6.webp",
+      "createdAt": "2026-05-03"
+    },
+    {
+      "id": "70",
+      "name": "Mona Zaki",
+      "email": "mona.z@patient.com",
+      "password": "patient123",
+      "phone": "01060000025",
+      "role": "patient",
+      "avatar": "images/patient/1.webp",
+      "createdAt": "2026-05-04"
+    },
+    {
+      "id": "71",
+      "name": "Amir Karara",
+      "email": "amir.k@patient.com",
+      "password": "patient123",
+      "phone": "01060000026",
+      "role": "patient",
+      "avatar": "images/patient/9.webp",
+      "createdAt": "2026-05-05"
+    },
+    {
+      "id": "72",
+      "name": "Nelly Karim",
+      "email": "nelly.k@patient.com",
+      "password": "patient123",
+      "phone": "01060000027",
+      "role": "patient",
+      "avatar": "images/patient/5.webp",
+      "createdAt": "2026-05-06"
+    },
+    {
+      "id": "73",
+      "name": "Bassem Youssef",
+      "email": "bassem.y@patient.com",
+      "password": "patient123",
+      "phone": "01060000028",
+      "role": "patient",
+      "avatar": "images/patient/10.webp",
+      "createdAt": "2026-05-07"
+    },
+    {
+      "id": "74",
+      "name": "Hend Sabri",
+      "email": "hend.s@patient.com",
+      "password": "patient123",
+      "phone": "01060000029",
+      "role": "patient",
+      "avatar": "images/patient/3.webp",
+      "createdAt": "2026-05-08"
+    },
+    {
+      "id": "75",
+      "name": "Dhafer L'Abidine",
+      "email": "dhafer.l@patient.com",
+      "password": "patient123",
+      "phone": "01060000030",
+      "role": "patient",
+      "avatar": "images/patient/7.webp",
+      "createdAt": "2026-05-09",
+      "isActive": false
+    },
+    {
+      "fullName": "Nadar Mohamed",
+      "email": "nadar1@doctor.com",
+      "password": "doctor123",
+      "specialization": "Dermatology",
+      "experience": 15,
+      "price": 200,
+      "bio": "Board-certified Dermatologist specializing in aesthetic medicine and advanced skin rejuvenation. Passionate about combining medical expertise with the latest cosmetic technologies to deliver natural-looking results. Expert in injectable treatments, chemical peels, and skin cancer screenings.",
+      "avatar": "data:image/webp;base64,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",
+      "role": "doctor",
+      "rating": 0,
+      "reviewCount": 0,
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "21:45",
+          "endTime": "22:00",
+          "isBooked": false
+        }
+      ],
+      "id": "L0p8NB5qgZU",
+      "name": "Nadar Mohamed"
+    },
+    {
+      "fullName": "Mahmoud Ahmed",
+      "email": "mahmoud1@doctor.com",
+      "password": "doctor123",
+      "specialization": "Psychiatrist",
+      "experience": 3,
+      "price": 300,
+      "bio": "pediatrics 3 year Experience",
+      "avatar": "data:image/webp;base64,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",
+      "role": "doctor",
+      "rating": 0,
+      "reviewCount": 0,
+      "availableSlots": [
+        {
+          "day": "Monday",
+          "startTime": "08:59",
+          "endTime": "09:03",
+          "isBooked": false
+        },
+        {
+          "day": "Thursday",
+          "startTime": "14:10",
+          "endTime": "14:30",
+          "isBooked": false
+        }
+      ],
+      "id": "Pc9phyF7zsI",
+      "name": "Mahmoud Ahmed"
+    },
+    {
+      "fullName": "madona Magdy",
+      "email": "madona1@doctor.com",
+      "password": "doctor123",
+      "specialization": "Dermatology",
+      "experience": 3,
+      "price": 400,
+      "bio": "Have 3 year Experience",
+      "avatar": "data:image/webp;base64,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",
+      "role": "doctor",
+      "rating": 3.7,
+      "reviewCount": 3,
+      "availableSlots": [],
+      "id": "HmEWzUIMvHo",
+      "name": "Dr. Mark Magdy",
+      "createdAt": "2026-04-14T08:39:20.533Z"
+    },
+    {
+      "name": "Islam Mohsen",
+      "email": "islam123@doctor.com",
+      "password": "dovtor123",
+      "specialization": "Oncologist",
+      "experience": 20,
+      "price": 1999,
+      "bio": "Agmed doctor",
+      "avatar": "data:image/webp;base64,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",
+      "role": "doctor",
+      "rating": 3,
+      "reviewCount": 2,
+      "availableSlots": [],
+      "id": "-SLTCfa0DNI"
+    },
+    {
+      "id": "TSrKweZ8sis",
+      "name": "Mohamed Ashraf",
+      "email": "mohamed123@patient.com",
+      "password": "123456",
+      "phone": "",
+      "role": "patient",
+      "createdAt": "2026-04-12T13:47:14.115Z",
+      "isActive": true
+    },
+    {
+      "id": "4XY1sMAVyWY",
+      "name": "Mariam Ashraf",
+      "email": "Mariam123@patient.com",
+      "password": "123456",
+      "phone": "",
+      "role": "patient",
+      "createdAt": "2026-04-12T14:30:23.758Z",
+      "isActive": true
+    },
+    {
+      "id": "F1M4rcqrjf4",
+      "name": "Mohamed Ali",
+      "email": "mohamed1234@patient.com",
+      "password": "123456@mm",
+      "phone": "",
+      "role": "patient",
+      "createdAt": "2026-04-14T10:31:15.465Z",
+      "isActive": true
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "date": "2026-04-10",
+      "timeSlot": "09:00 - 09:30",
+      "status": "completed",
+      "notes": "Regular checkup",
+      "createdAt": "2026-03-25"
+    },
+    {
+      "id": "4",
+      "patientId": "52",
+      "doctorId": "7",
+      "date": "2026-04-16",
+      "timeSlot": "09:00 - 10:00",
+      "status": "confirmed",
+      "notes": "Child fever",
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": "5",
+      "patientId": "53",
+      "doctorId": "6",
+      "date": "2026-04-17",
+      "timeSlot": "10:00 - 11:00",
+      "status": "pending",
+      "notes": "Knee pain",
+      "createdAt": "2026-04-03"
+    },
+    {
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "completed",
+      "createdAt": "2026-04-09T17:46:44.689Z",
+      "date": "2026-04-11",
+      "timeSlot": "09:30 - 10:00",
+      "notes": "",
+      "id": "_sl0t4DINFo"
+    },
+    {
+      "patientId": "52",
+      "doctorId": "11",
+      "status": "pending",
+      "createdAt": "2026-04-09T20:11:45.622Z",
+      "date": "2026-04-24",
+      "timeSlot": "09:00 - 10:30",
+      "notes": "",
+      "id": "zXXifVdmcvo"
+    },
+    {
+      "patientId": "4",
+      "doctorId": "3",
+      "status": "confirmed",
+      "createdAt": "2026-04-10T12:22:36.797Z",
+      "date": "2026-04-23",
+      "timeSlot": "10:30 - 11:00",
+      "notes": "",
+      "id": "fD9_NQfzpKY"
+    },
+    {
+      "date": "2026-04-12",
+      "timeSlot": "10:00 - 10:30",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "cancelled",
+      "createdAt": "2026-04-11T09:19:28.804Z",
+      "id": "yETkR00ycsw"
+    },
+    {
+      "date": "2026-04-29",
+      "timeSlot": "14:00 - 16:00",
+      "patientId": "51",
+      "doctorId": "30",
+      "status": "pending",
+      "createdAt": "2026-04-11T10:03:07.868Z",
+      "id": "owkv9GO-ngE"
+    },
+    {
+      "date": "2026-04-21",
+      "timeSlot": "14:00 - 15:30",
+      "patientId": "49",
+      "doctorId": "12",
+      "status": "pending",
+      "createdAt": "2026-04-11T12:37:49.196Z",
+      "id": "4YAAekZdIVo"
+    },
+    {
+      "date": "2026-04-12",
+      "timeSlot": "09:00 - 09:30",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "cancelled",
+      "createdAt": "2026-04-12T12:55:51.166Z",
+      "id": "MyIXKWVWliI"
+    },
+    {
+      "date": "2026-04-12",
+      "timeSlot": "10:00 - 10:30",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "completed",
+      "createdAt": "2026-04-12T12:57:50.670Z",
+      "id": "NytU2iaeZwM"
+    },
+    {
+      "date": "2026-04-17",
+      "timeSlot": "09:00 - 10:00",
+      "patientId": "55",
+      "doctorId": "2",
+      "status": "confirmed",
+      "createdAt": "2026-04-12T12:59:49.956Z",
+      "id": "vBBd3KCk930"
+    },
+    {
+      "date": "2026-04-12",
+      "timeSlot": "09:30 - 10:00",
+      "patientId": "55",
+      "doctorId": "2",
+      "status": "completed",
+      "createdAt": "2026-04-12T13:00:10.858Z",
+      "id": "gf5GOxe5DQM"
+    },
+    {
+      "date": "2026-04-18",
+      "timeSlot": "11:00 - 12:00",
+      "patientId": "55",
+      "doctorId": "6",
+      "status": "pending",
+      "createdAt": "2026-04-12T13:00:32.762Z",
+      "id": "sdlj_L-aYCc"
+    },
+    {
+      "date": "2026-04-13",
+      "timeSlot": "11:00 - 12:00",
+      "patientId": "53",
+      "doctorId": "14",
+      "status": "pending",
+      "createdAt": "2026-04-12T20:09:47.595Z",
+      "id": "lva4JlIQRPA"
+    },
+    {
+      "id": "A1B2C3D4_01",
+      "patientId": "4",
+      "doctorId": "2",
+      "date": "2026-01-15",
+      "timeSlot": "10:00 - 10:30",
+      "status": "completed",
+      "notes": "Follow up on previous surgery",
+      "createdAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_02",
+      "patientId": "5",
+      "doctorId": "3",
+      "date": "2026-01-20",
+      "timeSlot": "11:00 - 11:30",
+      "status": "confirmed",
+      "notes": "Routine blood test",
+      "createdAt": "2026-01-10T09:30:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_03",
+      "patientId": "46",
+      "doctorId": "6",
+      "date": "2026-02-05",
+      "timeSlot": "09:00 - 09:45",
+      "status": "completed",
+      "notes": "Post-flu checkup",
+      "createdAt": "2026-01-28T14:20:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "cancelled",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_05",
+      "patientId": "48",
+      "doctorId": "22",
+      "date": "2026-03-02",
+      "timeSlot": "12:00 - 13:00",
+      "status": "completed",
+      "notes": "Consultation for back pain",
+      "createdAt": "2026-02-25T16:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "confirmed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "cancelled",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_05",
+      "patientId": "48",
+      "doctorId": "22",
+      "date": "2026-03-02",
+      "timeSlot": "12:00 - 13:00",
+      "status": "completed",
+      "notes": "Consultation for back pain",
+      "createdAt": "2026-02-25T16:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "confirmed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "completed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_05",
+      "patientId": "48",
+      "doctorId": "22",
+      "date": "2026-03-02",
+      "timeSlot": "12:00 - 13:00",
+      "status": "completed",
+      "notes": "Consultation for back pain",
+      "createdAt": "2026-02-25T16:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "confirmed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "completed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_05",
+      "patientId": "48",
+      "doctorId": "22",
+      "date": "2026-03-02",
+      "timeSlot": "12:00 - 13:00",
+      "status": "completed",
+      "notes": "Consultation for back pain",
+      "createdAt": "2026-02-25T16:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_04",
+      "patientId": "47",
+      "doctorId": "15",
+      "date": "2026-02-18",
+      "timeSlot": "14:00 - 14:30",
+      "status": "confirmed",
+      "notes": "Patient requested cancellation",
+      "createdAt": "2026-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_05",
+      "patientId": "48",
+      "doctorId": "22",
+      "date": "2026-03-02",
+      "timeSlot": "12:00 - 13:00",
+      "status": "completed",
+      "notes": "Consultation for back pain",
+      "createdAt": "2026-02-25T16:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_06",
+      "patientId": "49",
+      "doctorId": "30",
+      "date": "2026-03-14",
+      "timeSlot": "10:30 - 11:00",
+      "status": "completed",
+      "notes": "Heart rate monitoring",
+      "createdAt": "2026-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_07",
+      "patientId": "50",
+      "doctorId": "40",
+      "date": "2026-03-25",
+      "timeSlot": "15:00 - 16:00",
+      "status": "completed",
+      "notes": "Allergy investigation",
+      "createdAt": "2026-03-15T12:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_08",
+      "patientId": "51",
+      "doctorId": "8",
+      "date": "2026-03-28",
+      "timeSlot": "08:30 - 09:00",
+      "status": "completed",
+      "notes": "Skin check",
+      "createdAt": "2026-03-20T09:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_09",
+      "patientId": "52",
+      "doctorId": "12",
+      "date": "2026-04-01",
+      "timeSlot": "11:30 - 12:00",
+      "status": "completed",
+      "notes": "Nutrition plan review",
+      "createdAt": "2026-03-25T14:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_10",
+      "patientId": "53",
+      "doctorId": "25",
+      "date": "2026-04-02",
+      "timeSlot": "13:00 - 13:45",
+      "status": "cancelled",
+      "notes": "Doctor unavailable",
+      "createdAt": "2026-03-28T10:30:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_11",
+      "patientId": "54",
+      "doctorId": "33",
+      "date": "2026-04-05",
+      "timeSlot": "09:00 - 09:30",
+      "status": "completed",
+      "notes": "Migraine discussion",
+      "createdAt": "2026-04-01T08:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_13",
+      "patientId": "56",
+      "doctorId": "10",
+      "date": "2026-04-07",
+      "timeSlot": "10:00 - 11:00",
+      "status": "completed",
+      "notes": "Blood pressure adjustment",
+      "createdAt": "2026-04-02T09:15:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_14",
+      "patientId": "57",
+      "doctorId": "21",
+      "date": "2026-04-08",
+      "timeSlot": "11:30 - 12:00",
+      "status": "completed",
+      "notes": "Allergy shots",
+      "createdAt": "2026-04-03T13:45:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_15",
+      "patientId": "58",
+      "doctorId": "35",
+      "date": "2026-04-09",
+      "timeSlot": "14:00 - 14:30",
+      "status": "completed",
+      "notes": "General exam",
+      "createdAt": "2026-04-05T10:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_16",
+      "patientId": "59",
+      "doctorId": "7",
+      "date": "2026-04-10",
+      "timeSlot": "09:00 - 09:30",
+      "status": "completed",
+      "notes": "Lab results discussion",
+      "createdAt": "2026-04-06T12:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_17",
+      "patientId": "60",
+      "doctorId": "18",
+      "date": "2026-04-11",
+      "timeSlot": "11:00 - 12:00",
+      "status": "completed",
+      "notes": "X-ray review",
+      "createdAt": "2026-04-07T15:30:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_18",
+      "patientId": "4",
+      "doctorId": "9",
+      "date": "2026-04-12",
+      "timeSlot": "13:00 - 13:30",
+      "status": "completed",
+      "notes": "Knee pain check",
+      "createdAt": "2026-04-08T16:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_19",
+      "patientId": "5",
+      "doctorId": "14",
+      "date": "2026-04-12",
+      "timeSlot": "10:00 - 10:30",
+      "status": "cancelled",
+      "notes": "Family emergency",
+      "createdAt": "2026-04-09T09:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_20",
+      "patientId": "46",
+      "doctorId": "28",
+      "date": "2026-04-13",
+      "timeSlot": "09:00 - 09:30",
+      "status": "confirmed",
+      "notes": "Today morning checkup",
+      "createdAt": "2026-04-10T11:20:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_21",
+      "patientId": "47",
+      "doctorId": "32",
+      "date": "2026-04-14",
+      "timeSlot": "12:00 - 12:45",
+      "status": "confirmed",
+      "notes": "Eye exam appointment",
+      "createdAt": "2026-04-11T14:10:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_22",
+      "patientId": "48",
+      "doctorId": "11",
+      "date": "2026-04-15",
+      "timeSlot": "10:30 - 11:00",
+      "status": "pending",
+      "notes": "Post-op checkup",
+      "createdAt": "2026-04-11T08:30:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_24",
+      "patientId": "50",
+      "doctorId": "23",
+      "date": "2026-04-17",
+      "timeSlot": "11:00 - 11:30",
+      "status": "pending",
+      "notes": "Cough monitoring",
+      "createdAt": "2026-04-12T10:15:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_25",
+      "patientId": "51",
+      "doctorId": "31",
+      "date": "2026-04-18",
+      "timeSlot": "09:30 - 10:00",
+      "status": "confirmed",
+      "notes": "Vitamin review",
+      "createdAt": "2026-04-12T13:00:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_26",
+      "patientId": "52",
+      "doctorId": "42",
+      "date": "2026-04-20",
+      "timeSlot": "13:30 - 14:00",
+      "status": "pending",
+      "notes": "Physical therapy session",
+      "createdAt": "2026-04-12T11:50:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_27",
+      "patientId": "53",
+      "doctorId": "16",
+      "date": "2026-04-22",
+      "timeSlot": "15:00 - 15:30",
+      "status": "confirmed",
+      "notes": "Stomach pain follow up",
+      "createdAt": "2026-04-13T14:20:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_28",
+      "patientId": "54",
+      "doctorId": "29",
+      "date": "2026-04-25",
+      "timeSlot": "10:00 - 10:30",
+      "status": "pending",
+      "notes": "Child vaccination",
+      "createdAt": "2026-04-13T16:10:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_29",
+      "patientId": "55",
+      "doctorId": "38",
+      "date": "2026-05-01",
+      "timeSlot": "11:30 - 12:00",
+      "status": "confirmed",
+      "notes": "Monthly check",
+      "createdAt": "2026-04-13T09:40:00.000Z"
+    },
+    {
+      "id": "A1B2C3D4_30",
+      "patientId": "56",
+      "doctorId": "13",
+      "date": "2026-05-10",
+      "timeSlot": "09:00 - 10:00",
+      "status": "pending",
+      "notes": "Dental appointment",
+      "createdAt": "2026-04-13T07:20:00.000Z"
+    },
+    {
+      "date": "2026-04-15",
+      "timeSlot": "16:00 - 17:00",
+      "patientId": "2",
+      "doctorId": "6",
+      "status": "pending",
+      "createdAt": "2026-04-14T08:08:07.124Z",
+      "id": "F122KtNStIw"
+    },
+    {
+      "date": "2026-04-14",
+      "timeSlot": "10:00 - 10:20",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "completed",
+      "createdAt": "2026-04-14T10:51:03.913Z",
+      "id": "gHF6pBu6HhA"
+    },
+    {
+      "date": "2026-04-16",
+      "timeSlot": "09:00 - 10:00",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "completed",
+      "createdAt": "2026-04-14T11:20:21.467Z",
+      "id": "4we5-l4wTNo"
+    },
+    {
+      "date": "2026-04-18",
+      "timeSlot": "13:10 - 13:25",
+      "patientId": "4",
+      "doctorId": "2",
+      "status": "pending",
+      "createdAt": "2026-04-16T20:35:53.369Z",
+      "id": "ewrvtqODR_I"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": "1",
+      "appointmentId": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "medications": [
+        {
+          "name": "Aspirin",
+          "dosage": "100mg",
+          "frequency": "Once daily",
+          "duration": "30 days"
+        }
+      ],
+      "diagnosis": "Mild hypertension",
+      "notes": "Monitor blood pressure weekly",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "2",
+      "appointmentId": null,
+      "patientId": "51",
+      "doctorId": "2",
+      "medications": [
+        {
+          "name": "Bisoprolol",
+          "dosage": "5mg",
+          "frequency": "Once daily",
+          "duration": "14 days"
+        }
+      ],
+      "diagnosis": "Arrhythmia",
+      "notes": "Avoid stress",
+      "createdAt": "2026-04-15"
+    },
+    {
+      "id": "3",
+      "appointmentId": "4",
+      "patientId": "52",
+      "doctorId": "7",
+      "medications": [
+        {
+          "name": "Paracetamol",
+          "dosage": "250mg",
+          "frequency": "Every 6 hours",
+          "duration": "5 days"
+        }
+      ],
+      "diagnosis": "Fever",
+      "notes": "Rest and drink fluids",
+      "createdAt": "2026-04-16"
+    },
+    {
+      "id": "4",
+      "appointmentId": "_sl0t4DINFo",
+      "patientId": "4",
+      "doctorId": "2",
+      "medications": [
+        {
+          "name": "Aspirin",
+          "dosage": "75mg",
+          "frequency": "Once daily",
+          "duration": "30 days"
+        },
+        {
+          "name": "Atorvastatin",
+          "dosage": "10mg",
+          "frequency": "Once daily",
+          "duration": "30 days"
+        }
+      ],
+      "diagnosis": "Early hypertension",
+      "notes": "Reduce salt and monitor BP",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "5",
+      "appointmentId": "4OEmqS8hd20",
+      "patientId": "4",
+      "doctorId": "2",
+      "medications": [
+        {
+          "name": "Bisoprolol",
+          "dosage": "2.5mg",
+          "frequency": "Once daily",
+          "duration": "14 days"
+        }
+      ],
+      "diagnosis": "Mild arrhythmia",
+      "notes": "Avoid caffeine",
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "6",
+      "appointmentId": "tnphlEdDzjI",
+      "patientId": "4",
+      "doctorId": "2",
+      "medications": [
+        {
+          "name": "Clopidogrel",
+          "dosage": "75mg",
+          "frequency": "Once daily",
+          "duration": "21 days"
+        }
+      ],
+      "diagnosis": "Risk of clotting",
+      "notes": "Follow up after 3 weeks",
+      "createdAt": "2026-04-15"
+    },
+    {
+      "id": "7",
+      "appointmentId": "2",
+      "patientId": "50",
+      "doctorId": "3",
+      "medications": [
+        {
+          "name": "Hydrocortisone cream",
+          "dosage": "Apply twice daily",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "diagnosis": "Skin rash",
+      "notes": "Avoid irritants",
+      "createdAt": "2026-04-12"
+    },
+    {
+      "id": "8",
+      "appointmentId": "5",
+      "patientId": "53",
+      "doctorId": "6",
+      "medications": [
+        {
+          "name": "Ibuprofen",
+          "dosage": "400mg",
+          "frequency": "Every 8 hours",
+          "duration": "5 days"
+        }
+      ],
+      "diagnosis": "Knee inflammation",
+      "notes": "Rest and apply ice",
+      "createdAt": "2026-04-17"
+    },
+    {
+      "appointmentId": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "diagnosis": "Test",
+      "notes": "",
+      "medications": [
+        {
+          "name": "test",
+          "dosage": "3672",
+          "frequency": "r7843",
+          "duration": "yu43i"
+        }
+      ],
+      "createdAt": "2026-04-11",
+      "id": "ghY6Ki9vmVs"
+    },
+    {
+      "appointmentId": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "diagnosis": "Heart attack",
+      "notes": "",
+      "medications": [
+        {
+          "name": "test",
+          "dosage": "test",
+          "frequency": "once daily",
+          "duration": "30 day"
+        }
+      ],
+      "createdAt": "2026-04-11",
+      "id": "RDUdTTvnNZ0"
+    },
+    {
+      "appointmentId": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "diagnosis": "Test",
+      "notes": "eating egg",
+      "medications": [
+        {
+          "name": "kdllds",
+          "dosage": "hdbhj",
+          "frequency": "30",
+          "duration": "30"
+        }
+      ],
+      "createdAt": "2026-04-11",
+      "id": "-9AS54ZOg2w"
+    }
+  ],
+  "medicalRecords": [
+    {
+      "id": "1",
+      "patientId": "49",
+      "doctorId": "2",
+      "appointmentId": "1",
+      "diagnosis": "Mild hypertension",
+      "notes": "Reduce salt intake",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "2",
+      "patientId": "51",
+      "doctorId": "2",
+      "appointmentId": null,
+      "diagnosis": "Arrhythmia",
+      "notes": "Follow up after 2 weeks",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "3",
+      "patientId": "52",
+      "doctorId": "7",
+      "appointmentId": "4",
+      "diagnosis": "Fever",
+      "notes": "Rest at home",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "4",
+      "patientId": "4",
+      "doctorId": "2",
+      "appointmentId": "_sl0t4DINFo",
+      "diagnosis": "Early hypertension",
+      "notes": "Patient advised to reduce salt intake",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "5",
+      "patientId": "4",
+      "doctorId": "2",
+      "appointmentId": "4OEmqS8hd20",
+      "diagnosis": "Mild arrhythmia",
+      "notes": "Follow up ECG recommended",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "6",
+      "patientId": "4",
+      "doctorId": "2",
+      "appointmentId": "tnphlEdDzjI",
+      "diagnosis": "Risk of clotting",
+      "notes": "Monitor symptoms closely",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "7",
+      "patientId": "50",
+      "doctorId": "3",
+      "appointmentId": "2",
+      "diagnosis": "Skin rash",
+      "notes": "Likely allergic reaction",
+      "date": "2026-04-12"
+    },
+    {
+      "id": "8",
+      "patientId": "53",
+      "doctorId": "6",
+      "appointmentId": "5",
+      "diagnosis": "Knee inflammation",
+      "notes": "Avoid heavy activity",
+      "date": "2026-04-17"
+    }
+  ],
+  "notifications": [
+    {
+      "recipientId": "6",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-13.",
+      "type": "appointment_booked",
+      "appointmentId": "8B18VeEUtOg",
+      "status": "unread",
+      "createdAt": "2026-04-11T13:17:02.721Z",
+      "id": "IaxqtPv3Fhs"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "yBaUDWp3bew",
+      "status": "unread",
+      "createdAt": "2026-04-11T14:23:48.481Z",
+      "id": "DQibEIysOwY"
+    },
+    {
+      "recipientId": "1",
+      "message": "Appointment Update: Patient Mohamed Ali & Dr. Ahmed Hassan. Updated by: doctor. Status: confirmed.",
+      "type": "appointment_updated",
+      "appointmentId": "yBaUDWp3bew",
+      "status": "unread",
+      "createdAt": "2026-04-11T14:23:48.486Z",
+      "id": "2LJXV730UUQ"
+    },
+    {
+      "recipientId": "49",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to cancelled.",
+      "type": "status_changed",
+      "appointmentId": "1",
+      "status": "unread",
+      "createdAt": "2026-04-11T14:28:48.707Z",
+      "id": "3EkXmAHQghs"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Sara Mohamed has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "fD9_NQfzpKY",
+      "status": "unread",
+      "createdAt": "2026-04-11T17:05:04.988Z",
+      "id": "2Mde61OFO5w"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "yETkR00ycsw",
+      "status": "unread",
+      "createdAt": "2026-04-11T17:17:57.535Z",
+      "id": "YaMl7_zebcI"
+    },
+    {
+      "recipientId": "3",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-13.",
+      "type": "appointment_booked",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-11T19:49:43.546Z",
+      "id": "WChl2i272F8"
+    },
+    {
+      "recipientId": "26",
+      "message": "Patient Mohamed Ali has updated the appointment date/time to 2026-04-16 at 11:00 - 13:00.",
+      "type": "appointment_updated",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-11T19:56:31.113Z",
+      "id": "DnliNurWwyM"
+    },
+    {
+      "recipientId": "3",
+      "message": "Patient Mohamed Ali has updated the appointment date/time to 2026-04-15 at 13:00 - 13:30.",
+      "type": "appointment_updated",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-11T19:56:46.402Z",
+      "id": "Vb6ywJcnKyE"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-12.",
+      "type": "appointment_booked",
+      "appointmentId": "MyIXKWVWliI",
+      "status": "unread",
+      "createdAt": "2026-04-12T12:55:51.179Z",
+      "id": "gZO-fKQkNsE"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-17.",
+      "type": "appointment_booked",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-12T12:56:22.626Z",
+      "id": "n066vEw7ca0"
+    },
+    {
+      "recipientId": "3",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-13.",
+      "type": "appointment_booked",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-12T12:56:45.220Z",
+      "id": "HY9yJQvf_os"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to cancelled.",
+      "type": "status_changed",
+      "appointmentId": "MyIXKWVWliI",
+      "status": "unread",
+      "createdAt": "2026-04-12T12:57:12.368Z",
+      "id": "3GGDMhfErSs"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-12T12:57:21.706Z",
+      "id": "HD5WW3OPrWI"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to completed.",
+      "type": "status_changed",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-12T12:57:28.793Z",
+      "id": "vKJ9WN3lG48"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-12.",
+      "type": "appointment_booked",
+      "appointmentId": "NytU2iaeZwM",
+      "status": "unread",
+      "createdAt": "2026-04-12T12:57:50.696Z",
+      "id": "zVNUcW9x8_k"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Kareem Hamdy has booked an appointment with you on 2026-04-17.",
+      "type": "appointment_booked",
+      "appointmentId": "vBBd3KCk930",
+      "status": "unread",
+      "createdAt": "2026-04-12T12:59:49.987Z",
+      "id": "w11kUenKJkA"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Kareem Hamdy has booked an appointment with you on 2026-04-12.",
+      "type": "appointment_booked",
+      "appointmentId": "gf5GOxe5DQM",
+      "status": "unread",
+      "createdAt": "2026-04-12T13:00:10.871Z",
+      "id": "e0DsgaojGnE"
+    },
+    {
+      "recipientId": "6",
+      "message": "Patient Kareem Hamdy has booked an appointment with you on 2026-04-18.",
+      "type": "appointment_booked",
+      "appointmentId": "sdlj_L-aYCc",
+      "status": "unread",
+      "createdAt": "2026-04-12T13:00:32.776Z",
+      "id": "kUqWUS56fIs"
+    },
+    {
+      "recipientId": "55",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "vBBd3KCk930",
+      "status": "unread",
+      "createdAt": "2026-04-12T13:00:46.445Z",
+      "id": "lbtU4N_snwI"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to cancelled.",
+      "type": "status_changed",
+      "appointmentId": "yETkR00ycsw",
+      "status": "unread",
+      "createdAt": "2026-04-12T18:40:05.195Z",
+      "id": "lm4WSUb3c6E"
+    },
+    {
+      "recipientId": "14",
+      "message": "Patient Mostafa Amgad has booked an appointment with you on 2026-04-13.",
+      "type": "appointment_booked",
+      "appointmentId": "lva4JlIQRPA",
+      "status": "unread",
+      "createdAt": "2026-04-12T20:09:47.628Z",
+      "id": "kiRxgNDA4WM"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-14.",
+      "type": "appointment_booked",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-12T20:52:18.175Z",
+      "id": "0WBM5x1eotY"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-14.",
+      "type": "appointment_booked",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-13T23:50:48.015Z",
+      "id": "HCTZidM_qR0"
+    },
+    {
+      "recipientId": "26",
+      "message": "Patient Mohamed Ali has updated the appointment date/time to 2026-04-14 at 11:00 - 13:00.",
+      "type": "appointment_updated",
+      "appointmentId": null,
+      "status": "unread",
+      "createdAt": "2026-04-13T23:56:41.020Z",
+      "id": "cwKkr7CoR3g"
+    },
+    {
+      "recipientId": "6",
+      "message": "Patient Dr. Ahmed Hassan has booked an appointment with you on 2026-04-15.",
+      "type": "appointment_booked",
+      "appointmentId": "F122KtNStIw",
+      "status": "unread",
+      "createdAt": "2026-04-14T08:08:07.222Z",
+      "id": "tllu2cMXCD8"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "NytU2iaeZwM",
+      "status": "unread",
+      "createdAt": "2026-04-14T10:20:33.134Z",
+      "id": "ytwahfftHgs"
+    },
+    {
+      "recipientId": "F1M4rcqrjf4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to cancelled.",
+      "type": "status_changed",
+      "appointmentId": "dqGkWLdWpak",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:18:10.556Z",
+      "id": "r1Z8UKanm0g"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to completed.",
+      "type": "status_changed",
+      "appointmentId": "NytU2iaeZwM",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:18:25.519Z",
+      "id": "Z75fNAvrWC8"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "6aAJDpYOTx4",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:18:31.774Z",
+      "id": "3FNqSegchl0"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-16.",
+      "type": "appointment_booked",
+      "appointmentId": "4we5-l4wTNo",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:20:21.495Z",
+      "id": "ib5TkySYqUM"
+    },
+    {
+      "recipientId": "55",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "gf5GOxe5DQM",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:29:18.052Z",
+      "id": "9Q4hYW38HSs"
+    },
+    {
+      "recipientId": "55",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to completed.",
+      "type": "status_changed",
+      "appointmentId": "gf5GOxe5DQM",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:29:26.164Z",
+      "id": "XzM7X95_JnQ"
+    },
+    {
+      "recipientId": "49",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to completed.",
+      "type": "status_changed",
+      "appointmentId": "1",
+      "status": "unread",
+      "createdAt": "2026-04-14T11:48:51.483Z",
+      "id": "3k6LDzraQbc"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to confirmed.",
+      "type": "status_changed",
+      "appointmentId": "4we5-l4wTNo",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:33:40.370Z",
+      "id": "SYxhIJdH5q0"
+    },
+    {
+      "recipientId": "111",
+      "message": "Appointment Update: Patient Mohamed Ali & Dr. Ahmed Hassan. Updated by: doctor. Status: confirmed.",
+      "type": "appointment_updated",
+      "appointmentId": "4we5-l4wTNo",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:33:40.384Z",
+      "id": "oLuCE0wVc_c"
+    },
+    {
+      "recipientId": "4",
+      "message": "Your appointment status with Dr. Ahmed Hassan has been updated to completed.",
+      "type": "status_changed",
+      "appointmentId": "4we5-l4wTNo",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:33:50.327Z",
+      "id": "BrO5ScvdUs8"
+    },
+    {
+      "recipientId": "111",
+      "message": "Appointment Update: Patient Mohamed Ali & Dr. Ahmed Hassan. Updated by: doctor. Status: completed.",
+      "type": "appointment_updated",
+      "appointmentId": "4we5-l4wTNo",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:33:50.350Z",
+      "id": "ulfLQIzS8Eg"
+    },
+    {
+      "recipientId": "2",
+      "message": "Patient Mohamed Ali has booked an appointment with you on 2026-04-18.",
+      "type": "appointment_booked",
+      "appointmentId": "ewrvtqODR_I",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:35:53.416Z",
+      "id": "t3kr5MaX32w"
+    },
+    {
+      "recipientId": "111",
+      "message": "New booking: Patient Mohamed Ali has booked an appointment with Dr. Ahmed Hassan on 2026-04-18.",
+      "type": "appointment_booked",
+      "appointmentId": "ewrvtqODR_I",
+      "status": "unread",
+      "createdAt": "2026-04-16T20:35:53.495Z",
+      "id": "CwTklTkDmQo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
